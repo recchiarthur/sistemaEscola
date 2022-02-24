@@ -49,6 +49,9 @@
     <Compile Include="RedefinirSenha.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RedefinirSenha.Designer.cs">
+      <DependentUpon>RedefinirSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="SistemaSENAI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="RedefinirSenha.resx">
+      <DependentUpon>RedefinirSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SistemaSENAI.resx">
       <DependentUpon>SistemaSENAI.cs</DependentUpon>
     </EmbeddedResource>

@@ -19,6 +19,8 @@ namespace SistemaSENAI
 
         int senhapadrao = 123456;
 
+        RedefinirSenha senha = new RedefinirSenha();
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -36,7 +38,12 @@ namespace SistemaSENAI
         {
             if(int.Parse(TxtBoxSenha.Text) == senhapadrao)
             {
-                Form RedefinirSenha = new RedefinirSenha();
+                RedefinirSenha redsenha = new RedefinirSenha();
+                redsenha.Show();
+            }
+            else if(bool.Parse(TxtBoxSenha.Text = senha.GetSenha()))
+            {
+                MessageBox.Show("Tá tudo certo");
             }
         }
 
