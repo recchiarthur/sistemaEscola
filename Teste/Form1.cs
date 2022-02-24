@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Teste
 {
-    public partial class Form1 : Form
+    public partial class Janela : Form
     {
-        public Form1()
+        public Janela()
         {
             InitializeComponent();
         }

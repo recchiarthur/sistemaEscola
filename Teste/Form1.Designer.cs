@@ -2,7 +2,7 @@
 
 namespace Teste
 {
-    partial class Form1
+    partial class Janela
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -30,7 +30,7 @@ namespace Teste
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Janela));
             this.TxtBoxCPF = new System.Windows.Forms.TextBox();
             this.CheckBoxAluno = new System.Windows.Forms.CheckBox();
             this.CheckBoxProf = new System.Windows.Forms.CheckBox();
@@ -131,7 +131,7 @@ namespace Teste
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form1
+            // Janela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,8 +146,9 @@ namespace Teste
             this.Controls.Add(this.CheckBoxAluno);
             this.Controls.Add(this.CheckBoxProf);
             this.Controls.Add(this.TxtBoxCPF);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Janela";
+            this.Text = "SistemaSENAI";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
