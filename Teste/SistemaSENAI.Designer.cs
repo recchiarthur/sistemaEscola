@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Teste
+namespace SistemaSENAI
 {
     partial class Janela
     {
@@ -39,6 +39,7 @@ namespace Teste
             this.TxtBoxSenha = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TxtBoxCPF
@@ -115,7 +116,7 @@ namespace Teste
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.Location = new System.Drawing.Point(646, 311);
+            this.button1.Location = new System.Drawing.Point(646, 315);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 61);
             this.button1.TabIndex = 6;
@@ -134,6 +135,17 @@ namespace Teste
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(645, 296);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 16);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Senha padrão: 123456";
+            // 
             // Janela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,6 +153,7 @@ namespace Teste
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(923, 534);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -167,6 +180,7 @@ namespace Teste
         private TextBox TxtBoxSenha;
         private Button button1;
         private Button button2;
+        private Label label3;
     }
 }
 
