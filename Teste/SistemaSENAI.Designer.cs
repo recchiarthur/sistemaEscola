@@ -36,7 +36,7 @@ namespace Teste
             this.CheckBoxProf = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtBoxSenha = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -100,16 +100,16 @@ namespace Teste
             this.label2.TabIndex = 5;
             this.label2.Text = "Insira a senha:";
             // 
-            // textBox1
+            // TxtBoxSenha
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox1.Location = new System.Drawing.Point(641, 265);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(168, 30);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TxtBoxSenha.BackColor = System.Drawing.Color.White;
+            this.TxtBoxSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.TxtBoxSenha.Location = new System.Drawing.Point(641, 265);
+            this.TxtBoxSenha.Name = "TxtBoxSenha";
+            this.TxtBoxSenha.PasswordChar = '*';
+            this.TxtBoxSenha.Size = new System.Drawing.Size(168, 30);
+            this.TxtBoxSenha.TabIndex = 4;
+            this.TxtBoxSenha.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -144,7 +144,7 @@ namespace Teste
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtBoxSenha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CheckBoxAluno);
             this.Controls.Add(this.CheckBoxProf);
@@ -164,7 +164,7 @@ namespace Teste
         private CheckBox CheckBoxProf;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox TxtBoxSenha;
         private Button button1;
         private Button button2;
     }

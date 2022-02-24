@@ -17,6 +17,8 @@ namespace Teste
             InitializeComponent();
         }
 
+        int senhapadrao = 123456;
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -32,7 +34,7 @@ namespace Teste
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if()
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -42,13 +44,13 @@ namespace Teste
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.PasswordChar == '*')
+            if (TxtBoxSenha.PasswordChar == '*')
             {
-                textBox1.PasswordChar = '\0';
+                TxtBoxSenha.PasswordChar = '\0';
             }
             else
             {
-                textBox1.PasswordChar = '*';
+                TxtBoxSenha.PasswordChar = '*';
             }
         }
 
