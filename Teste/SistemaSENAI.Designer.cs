@@ -50,6 +50,7 @@ namespace Teste
             this.TxtBoxCPF.Size = new System.Drawing.Size(168, 30);
             this.TxtBoxCPF.TabIndex = 2;
             this.TxtBoxCPF.TextChanged += new System.EventHandler(this.TxtBoxCPF_TextChanged);
+            this.TxtBoxCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxCPF_KeyPress_1);
             // 
             // CheckBoxAluno
             // 
@@ -62,6 +63,7 @@ namespace Teste
             this.CheckBoxAluno.TabIndex = 0;
             this.CheckBoxAluno.Text = "Aluno";
             this.CheckBoxAluno.UseVisualStyleBackColor = false;
+            this.CheckBoxAluno.CheckedChanged += new System.EventHandler(this.CheckBoxAluno_CheckedChanged);
             // 
             // CheckBoxProf
             // 
@@ -74,6 +76,7 @@ namespace Teste
             this.CheckBoxProf.TabIndex = 1;
             this.CheckBoxProf.Text = "Professor";
             this.CheckBoxProf.UseVisualStyleBackColor = false;
+            this.CheckBoxProf.CheckedChanged += new System.EventHandler(this.CheckBoxProf_CheckedChanged);
             // 
             // label1
             // 
