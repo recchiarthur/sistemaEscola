@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RedefinirSenha));
             this.LabelRedSenha = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.NovaSenha = new System.Windows.Forms.TextBox();
@@ -123,6 +124,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.NovaSenha);
             this.Controls.Add(this.LabelRedSenha);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RedefinirSenha";
             this.Text = "Redefinir Senha";
             this.ResumeLayout(false);

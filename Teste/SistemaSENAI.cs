@@ -52,8 +52,10 @@ namespace SistemaSENAI
             }
             else if(TxtBoxSenha.Text == senha.GetSenha())
             {
-                MessageBox.Show("Tá tudo certo");
+                Application.ExitThread();
             }
+            PagInicial pag = new PagInicial();
+            pag.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
