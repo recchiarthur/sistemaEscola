@@ -32,9 +32,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.NovaSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SenhaConf = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelRedSenha
@@ -79,27 +79,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Confirme a senha:";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(208, 139);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(21, 30);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "👁";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // SenhaConf
-            // 
-            this.SenhaConf.BackColor = System.Drawing.Color.White;
-            this.SenhaConf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.SenhaConf.Location = new System.Drawing.Point(61, 139);
-            this.SenhaConf.Name = "SenhaConf";
-            this.SenhaConf.PasswordChar = '*';
-            this.SenhaConf.Size = new System.Drawing.Size(168, 30);
-            this.SenhaConf.TabIndex = 11;
-            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -111,14 +90,35 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(208, 138);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(21, 30);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "👁";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // SenhaConf
+            // 
+            this.SenhaConf.BackColor = System.Drawing.Color.White;
+            this.SenhaConf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.SenhaConf.Location = new System.Drawing.Point(61, 138);
+            this.SenhaConf.Name = "SenhaConf";
+            this.SenhaConf.PasswordChar = '*';
+            this.SenhaConf.Size = new System.Drawing.Size(168, 30);
+            this.SenhaConf.TabIndex = 14;
+            this.SenhaConf.TextChanged += new System.EventHandler(this.SenhaConf_TextChanged);
+            // 
             // RedefinirSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(287, 239);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SenhaConf);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.NovaSenha);
@@ -136,8 +136,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox NovaSenha;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox SenhaConf;
-        private System.Windows.Forms.Button button3;
     }
 }

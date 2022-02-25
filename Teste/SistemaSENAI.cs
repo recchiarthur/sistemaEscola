@@ -36,13 +36,14 @@ namespace SistemaSENAI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(!CheckBoxAluno.Checked && !CheckBoxProf.Checked)
+            label4.Text = senha.GetSenha();
+            if (!CheckBoxAluno.Checked && !CheckBoxProf.Checked)
             {
                 MessageBox.Show("Selecione se você é professor ou aluno!");
             }
-            else if (String.IsNullOrEmpty(TxtBoxCPF.Text))
+            else if (TxtBoxCPF.Text.Length < 11)
             {
-                MessageBox.Show("Insira o CPF!");
+                MessageBox.Show("Insira o CPF corretamente!");
             }
             else if(TxtBoxSenha.Text == senhapadrao)
             {

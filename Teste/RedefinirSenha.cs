@@ -16,7 +16,7 @@ namespace SistemaSENAI
         {
             InitializeComponent();
         }
-        string senha;
+        string senha = "42";
 
         public string GetSenha()
         {
@@ -35,7 +35,7 @@ namespace SistemaSENAI
             }
             else
             {
-                SetSenha(NovaSenha.Text);
+                SetSenha(SenhaConf.Text);
                 this.Close();
             }
         }
@@ -67,6 +67,11 @@ namespace SistemaSENAI
             {
                 SenhaConf.PasswordChar = '*';
             }
+        }
+
+        private void SenhaConf_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
