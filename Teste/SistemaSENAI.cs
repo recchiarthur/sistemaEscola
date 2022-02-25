@@ -17,7 +17,7 @@ namespace SistemaSENAI
             InitializeComponent();
         }
 
-        int senhapadrao = 123456;
+        string senhapadrao = "123456";
 
         RedefinirSenha senha = new RedefinirSenha();
 
@@ -36,12 +36,20 @@ namespace SistemaSENAI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(int.Parse(TxtBoxSenha.Text) == senhapadrao)
+            if(!CheckBoxAluno.Checked && !CheckBoxProf.Checked)
+            {
+                MessageBox.Show("Selecione se você é professor ou aluno!");
+            }
+            else if (String.IsNullOrEmpty(TxtBoxCPF.Text))
+            {
+                MessageBox.Show("Insira o CPF!");
+            }
+            else if(TxtBoxSenha.Text == senhapadrao)
             {
                 RedefinirSenha redsenha = new RedefinirSenha();
                 redsenha.Show();
             }
-            else if(bool.Parse(TxtBoxSenha.Text = senha.GetSenha()))
+            else if(TxtBoxSenha.Text == senha.GetSenha())
             {
                 MessageBox.Show("Tá tudo certo");
             }

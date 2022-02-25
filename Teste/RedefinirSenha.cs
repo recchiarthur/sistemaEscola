@@ -23,9 +23,9 @@ namespace SistemaSENAI
             return senha;
         }
 
-        public void SetSenha(string s)
+        public void SetSenha(string sen)
         {
-            senha = s;
+            senha = sen;
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -36,8 +36,7 @@ namespace SistemaSENAI
             else
             {
                 SetSenha(NovaSenha.Text);
-                RedefinirSenha redsenha = new RedefinirSenha();
-                redsenha.Close();
+                this.Close();
             }
         }
 

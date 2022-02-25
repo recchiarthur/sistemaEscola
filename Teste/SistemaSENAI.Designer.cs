@@ -46,7 +46,7 @@ namespace SistemaSENAI
             // 
             this.TxtBoxCPF.BackColor = System.Drawing.Color.White;
             this.TxtBoxCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.TxtBoxCPF.Location = new System.Drawing.Point(641, 202);
+            this.TxtBoxCPF.Location = new System.Drawing.Point(596, 200);
             this.TxtBoxCPF.Name = "TxtBoxCPF";
             this.TxtBoxCPF.Size = new System.Drawing.Size(168, 30);
             this.TxtBoxCPF.TabIndex = 2;
@@ -58,7 +58,7 @@ namespace SistemaSENAI
             this.CheckBoxAluno.AutoSize = true;
             this.CheckBoxAluno.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxAluno.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxAluno.Location = new System.Drawing.Point(641, 106);
+            this.CheckBoxAluno.Location = new System.Drawing.Point(596, 104);
             this.CheckBoxAluno.Name = "CheckBoxAluno";
             this.CheckBoxAluno.Size = new System.Drawing.Size(77, 27);
             this.CheckBoxAluno.TabIndex = 0;
@@ -71,7 +71,7 @@ namespace SistemaSENAI
             this.CheckBoxProf.AutoSize = true;
             this.CheckBoxProf.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxProf.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxProf.Location = new System.Drawing.Point(641, 139);
+            this.CheckBoxProf.Location = new System.Drawing.Point(596, 137);
             this.CheckBoxProf.Name = "CheckBoxProf";
             this.CheckBoxProf.Size = new System.Drawing.Size(115, 27);
             this.CheckBoxProf.TabIndex = 1;
@@ -84,7 +84,7 @@ namespace SistemaSENAI
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(641, 174);
+            this.label1.Location = new System.Drawing.Point(596, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 25);
             this.label1.TabIndex = 3;
@@ -95,7 +95,7 @@ namespace SistemaSENAI
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.Location = new System.Drawing.Point(641, 237);
+            this.label2.Location = new System.Drawing.Point(596, 235);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 25);
             this.label2.TabIndex = 5;
@@ -105,7 +105,7 @@ namespace SistemaSENAI
             // 
             this.TxtBoxSenha.BackColor = System.Drawing.Color.White;
             this.TxtBoxSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.TxtBoxSenha.Location = new System.Drawing.Point(641, 265);
+            this.TxtBoxSenha.Location = new System.Drawing.Point(596, 263);
             this.TxtBoxSenha.Name = "TxtBoxSenha";
             this.TxtBoxSenha.PasswordChar = '*';
             this.TxtBoxSenha.Size = new System.Drawing.Size(168, 30);
@@ -116,7 +116,7 @@ namespace SistemaSENAI
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.Location = new System.Drawing.Point(646, 315);
+            this.button1.Location = new System.Drawing.Point(601, 313);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 61);
             this.button1.TabIndex = 6;
@@ -127,7 +127,7 @@ namespace SistemaSENAI
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(788, 265);
+            this.button2.Location = new System.Drawing.Point(743, 263);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(21, 30);
             this.button2.TabIndex = 7;
@@ -140,7 +140,7 @@ namespace SistemaSENAI
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(645, 296);
+            this.label3.Location = new System.Drawing.Point(600, 294);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 16);
             this.label3.TabIndex = 8;
