@@ -23,7 +23,7 @@ namespace SistemaSENAI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            label4.Text = senha.GetSenha();
         }
 
         private void TxtBoxCPF_KeyPress(object sender, KeyPressEventArgs e)
@@ -36,7 +36,6 @@ namespace SistemaSENAI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label4.Text = senha.GetSenha();
             if (!CheckBoxAluno.Checked && !CheckBoxProf.Checked)
             {
                 MessageBox.Show("Selecione se você é professor ou aluno!");

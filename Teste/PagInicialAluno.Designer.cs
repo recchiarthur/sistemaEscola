@@ -29,111 +29,148 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PagInicialAluno));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.buttonNotas = new System.Windows.Forms.Button();
+            this.buttonCalend = new System.Windows.Forms.Button();
+            this.buttonFaltas = new System.Windows.Forms.Button();
+            this.buttonQuadro = new System.Windows.Forms.Button();
+            this.buttonBoleto = new System.Windows.Forms.Button();
+            this.buttonRemat = new System.Windows.Forms.Button();
+            this.buttonGrade = new System.Windows.Forms.Button();
+            this.buttonCart = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonNotas
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkRed;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.ForeColor = System.Drawing.Color.Coral;
-            this.button1.Location = new System.Drawing.Point(-1, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 68);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "NOTAS";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonNotas.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonNotas.ForeColor = System.Drawing.Color.Coral;
+            this.buttonNotas.Location = new System.Drawing.Point(-1, 0);
+            this.buttonNotas.Name = "buttonNotas";
+            this.buttonNotas.Size = new System.Drawing.Size(166, 68);
+            this.buttonNotas.TabIndex = 0;
+            this.buttonNotas.Text = "NOTAS";
+            this.buttonNotas.UseVisualStyleBackColor = false;
+            this.buttonNotas.Click += new System.EventHandler(this.buttonNotas_Click);
             // 
-            // button2
+            // buttonCalend
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkRed;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button2.ForeColor = System.Drawing.Color.Coral;
-            this.button2.Location = new System.Drawing.Point(-1, 66);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 68);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "CALENDÁRIO";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonCalend.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonCalend.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonCalend.ForeColor = System.Drawing.Color.Coral;
+            this.buttonCalend.Location = new System.Drawing.Point(-1, 66);
+            this.buttonCalend.Name = "buttonCalend";
+            this.buttonCalend.Size = new System.Drawing.Size(166, 68);
+            this.buttonCalend.TabIndex = 1;
+            this.buttonCalend.Text = "CALENDÁRIO";
+            this.buttonCalend.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // buttonFaltas
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkRed;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button3.ForeColor = System.Drawing.Color.Coral;
-            this.button3.Location = new System.Drawing.Point(-1, 199);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(166, 68);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "FALTAS";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonFaltas.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonFaltas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonFaltas.ForeColor = System.Drawing.Color.Coral;
+            this.buttonFaltas.Location = new System.Drawing.Point(-1, 199);
+            this.buttonFaltas.Name = "buttonFaltas";
+            this.buttonFaltas.Size = new System.Drawing.Size(166, 68);
+            this.buttonFaltas.TabIndex = 3;
+            this.buttonFaltas.Text = "FALTAS";
+            this.buttonFaltas.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // buttonQuadro
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkRed;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button4.ForeColor = System.Drawing.Color.Coral;
-            this.button4.Location = new System.Drawing.Point(-1, 133);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 68);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "QUADRO DE\r\nHORÁRIOS";
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonQuadro.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonQuadro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonQuadro.ForeColor = System.Drawing.Color.Coral;
+            this.buttonQuadro.Location = new System.Drawing.Point(-1, 133);
+            this.buttonQuadro.Name = "buttonQuadro";
+            this.buttonQuadro.Size = new System.Drawing.Size(166, 68);
+            this.buttonQuadro.TabIndex = 2;
+            this.buttonQuadro.Text = "QUADRO DE\r\nHORÁRIOS";
+            this.buttonQuadro.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // buttonBoleto
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkRed;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button5.ForeColor = System.Drawing.Color.Coral;
-            this.button5.Location = new System.Drawing.Point(-1, 332);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(166, 68);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "EMITIR\r\nBOLETO";
-            this.button5.UseVisualStyleBackColor = false;
+            this.buttonBoleto.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonBoleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonBoleto.ForeColor = System.Drawing.Color.Coral;
+            this.buttonBoleto.Location = new System.Drawing.Point(-1, 332);
+            this.buttonBoleto.Name = "buttonBoleto";
+            this.buttonBoleto.Size = new System.Drawing.Size(166, 68);
+            this.buttonBoleto.TabIndex = 5;
+            this.buttonBoleto.Text = "EMITIR\r\nBOLETO";
+            this.buttonBoleto.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // buttonRemat
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkRed;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button6.ForeColor = System.Drawing.Color.Coral;
-            this.button6.Location = new System.Drawing.Point(-1, 266);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(166, 68);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "REMATRÍCULA";
-            this.button6.UseVisualStyleBackColor = false;
+            this.buttonRemat.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonRemat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonRemat.ForeColor = System.Drawing.Color.Coral;
+            this.buttonRemat.Location = new System.Drawing.Point(-1, 266);
+            this.buttonRemat.Name = "buttonRemat";
+            this.buttonRemat.Size = new System.Drawing.Size(166, 68);
+            this.buttonRemat.TabIndex = 4;
+            this.buttonRemat.Text = "REMATRÍCULA";
+            this.buttonRemat.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // buttonGrade
             // 
-            this.button7.BackColor = System.Drawing.Color.DarkRed;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button7.ForeColor = System.Drawing.Color.Coral;
-            this.button7.Location = new System.Drawing.Point(-1, 464);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(166, 68);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "GRADE\r\nCURRICULAR";
-            this.button7.UseVisualStyleBackColor = false;
+            this.buttonGrade.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonGrade.ForeColor = System.Drawing.Color.Coral;
+            this.buttonGrade.Location = new System.Drawing.Point(-1, 464);
+            this.buttonGrade.Name = "buttonGrade";
+            this.buttonGrade.Size = new System.Drawing.Size(166, 68);
+            this.buttonGrade.TabIndex = 7;
+            this.buttonGrade.Text = "GRADE\r\nCURRICULAR";
+            this.buttonGrade.UseVisualStyleBackColor = false;
+            this.buttonGrade.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // button8
+            // buttonCart
             // 
-            this.button8.BackColor = System.Drawing.Color.DarkRed;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button8.ForeColor = System.Drawing.Color.Coral;
-            this.button8.Location = new System.Drawing.Point(-1, 398);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(166, 68);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "CARTEIRINHA";
-            this.button8.UseVisualStyleBackColor = false;
+            this.buttonCart.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonCart.ForeColor = System.Drawing.Color.Coral;
+            this.buttonCart.Location = new System.Drawing.Point(-1, 398);
+            this.buttonCart.Name = "buttonCart";
+            this.buttonCart.Size = new System.Drawing.Size(166, 68);
+            this.buttonCart.TabIndex = 6;
+            this.buttonCart.Text = "CARTEIRINHA";
+            this.buttonCart.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Quicksand", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(185, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(654, 412);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Portal do Aluno";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(569, 176);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(448, 369);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // PagInicialAluno
             // 
@@ -141,31 +178,39 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(923, 534);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.buttonGrade);
+            this.Controls.Add(this.buttonCart);
+            this.Controls.Add(this.buttonBoleto);
+            this.Controls.Add(this.buttonRemat);
+            this.Controls.Add(this.buttonFaltas);
+            this.Controls.Add(this.buttonQuadro);
+            this.Controls.Add(this.buttonCalend);
+            this.Controls.Add(this.buttonNotas);
+            this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PagInicialAluno";
             this.Text = "Página inicial";
             this.Load += new System.EventHandler(this.PagInicial_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button buttonNotas;
+        private System.Windows.Forms.Button buttonCalend;
+        private System.Windows.Forms.Button buttonFaltas;
+        private System.Windows.Forms.Button buttonQuadro;
+        private System.Windows.Forms.Button buttonBoleto;
+        private System.Windows.Forms.Button buttonRemat;
+        private System.Windows.Forms.Button buttonGrade;
+        private System.Windows.Forms.Button buttonCart;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

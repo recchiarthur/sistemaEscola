@@ -10,26 +10,16 @@ using System.Windows.Forms;
 
 namespace SistemaSENAI
 {
-    public partial class PagInicialAluno : Form
+    public partial class Notas : Form
     {
-        public PagInicialAluno()
+        public Notas()
         {
             InitializeComponent();
         }
 
-        private void PagInicial_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonNotas_Click(object sender, EventArgs e)
-        {
-            Notas notas = new Notas();
-            notas.Show();
-        }
-
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
+            this.Close();
         }
     }
 }
