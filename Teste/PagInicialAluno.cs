@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaSENAI
 {
-    public partial class PagInicial : Form
+    public partial class PagInicialAluno : Form
     {
-        public PagInicial()
+        public PagInicialAluno()
         {
             InitializeComponent();
         }

@@ -50,12 +50,11 @@ namespace SistemaSENAI
                 RedefinirSenha redsenha = new RedefinirSenha();
                 redsenha.Show();
             }
-            else if(TxtBoxSenha.Text == senha.GetSenha())
+            else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxAluno.Checked)
             {
-                Application.ExitThread();
+                PagInicialAluno PIAluno = new PagInicialAluno();
+                PIAluno.Show();
             }
-            PagInicial pag = new PagInicial();
-            pag.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
