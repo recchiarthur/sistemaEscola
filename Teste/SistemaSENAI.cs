@@ -46,8 +46,7 @@ namespace SistemaSENAI
             }
             else if(TxtBoxSenha.Text == senhapadrao)
             {
-                RedefinirSenha redsenha = new RedefinirSenha();
-                redsenha.Show();
+                senha.Show();
             }
             else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxAluno.Checked)
             {
