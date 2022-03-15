@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PagInicialProf));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonNotas = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonHorario = new System.Windows.Forms.Button();
+            this.buttonRegPresc = new System.Windows.Forms.Button();
+            this.buttonRegNotas = new System.Windows.Forms.Button();
+            this.buttonPlan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -41,68 +41,68 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(707, 161);
+            this.pictureBox1.Location = new System.Drawing.Point(705, 76);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 331);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonNotas
+            // buttonHorario
             // 
-            this.buttonNotas.BackColor = System.Drawing.Color.DarkRed;
-            this.buttonNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.buttonNotas.ForeColor = System.Drawing.Color.Coral;
-            this.buttonNotas.Location = new System.Drawing.Point(0, 3);
-            this.buttonNotas.Name = "buttonNotas";
-            this.buttonNotas.Size = new System.Drawing.Size(166, 68);
-            this.buttonNotas.TabIndex = 1;
-            this.buttonNotas.Text = "NOTAS";
-            this.buttonNotas.UseVisualStyleBackColor = false;
+            this.buttonHorario.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonHorario.ForeColor = System.Drawing.Color.Coral;
+            this.buttonHorario.Location = new System.Drawing.Point(0, 98);
+            this.buttonHorario.Name = "buttonHorario";
+            this.buttonHorario.Size = new System.Drawing.Size(166, 68);
+            this.buttonHorario.TabIndex = 1;
+            this.buttonHorario.Text = "HORÁRIO";
+            this.buttonHorario.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonRegPresc
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkRed;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.ForeColor = System.Drawing.Color.Coral;
-            this.button1.Location = new System.Drawing.Point(0, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 68);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "NOTAS";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonRegPresc.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonRegPresc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonRegPresc.ForeColor = System.Drawing.Color.Coral;
+            this.buttonRegPresc.Location = new System.Drawing.Point(0, 172);
+            this.buttonRegPresc.Name = "buttonRegPresc";
+            this.buttonRegPresc.Size = new System.Drawing.Size(166, 68);
+            this.buttonRegPresc.TabIndex = 2;
+            this.buttonRegPresc.Text = "REGISTRAR\r\nPRESENÇA";
+            this.buttonRegPresc.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // buttonRegNotas
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkRed;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button2.ForeColor = System.Drawing.Color.Coral;
-            this.button2.Location = new System.Drawing.Point(0, 151);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 68);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "NOTAS";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonRegNotas.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonRegNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonRegNotas.ForeColor = System.Drawing.Color.Coral;
+            this.buttonRegNotas.Location = new System.Drawing.Point(0, 246);
+            this.buttonRegNotas.Name = "buttonRegNotas";
+            this.buttonRegNotas.Size = new System.Drawing.Size(166, 68);
+            this.buttonRegNotas.TabIndex = 3;
+            this.buttonRegNotas.Text = "REGISTRAR NOTAS";
+            this.buttonRegNotas.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // buttonPlan
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkRed;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button3.ForeColor = System.Drawing.Color.Coral;
-            this.button3.Location = new System.Drawing.Point(0, 225);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(166, 68);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "NOTAS";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonPlan.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonPlan.ForeColor = System.Drawing.Color.Coral;
+            this.buttonPlan.Location = new System.Drawing.Point(0, 320);
+            this.buttonPlan.Name = "buttonPlan";
+            this.buttonPlan.Size = new System.Drawing.Size(166, 68);
+            this.buttonPlan.TabIndex = 4;
+            this.buttonPlan.Text = "PLANEJAR\r\nAULAS";
+            this.buttonPlan.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(159, 19);
+            this.label1.Location = new System.Drawing.Point(160, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(706, 418);
+            this.label1.Size = new System.Drawing.Size(571, 271);
             this.label1.TabIndex = 9;
             this.label1.Text = "Portal do Professor";
             // 
@@ -113,10 +113,10 @@
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(907, 495);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonNotas);
+            this.Controls.Add(this.buttonPlan);
+            this.Controls.Add(this.buttonRegNotas);
+            this.Controls.Add(this.buttonRegPresc);
+            this.Controls.Add(this.buttonHorario);
             this.Controls.Add(this.label1);
             this.Name = "PagInicialProf";
             this.Text = "Página Inicial";
@@ -129,10 +129,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonNotas;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonHorario;
+        private System.Windows.Forms.Button buttonRegPresc;
+        private System.Windows.Forms.Button buttonRegNotas;
+        private System.Windows.Forms.Button buttonPlan;
         private System.Windows.Forms.Label label1;
     }
 }
