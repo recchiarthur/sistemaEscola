@@ -73,5 +73,17 @@ namespace SistemaSENAI
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (SenhaConf.PasswordChar == '*')
+            {
+                SenhaConf.PasswordChar = '\0';
+            }
+            else
+            {
+                SenhaConf.PasswordChar = '*';
+            }
+        }
     }
 }

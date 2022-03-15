@@ -23,7 +23,7 @@ namespace SistemaSENAI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label4.Text = senha.GetSenha();
+        
         }
 
         private void TxtBoxCPF_KeyPress(object sender, KeyPressEventArgs e)
@@ -52,6 +52,11 @@ namespace SistemaSENAI
             {
                 PagInicialAluno PIAluno = new PagInicialAluno();
                 PIAluno.Show();
+            }
+            else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxProf.Checked)
+            {
+                PagInicialProf PIProf = new PagInicialProf();
+                PIProf.Show();
             }
         }
 
