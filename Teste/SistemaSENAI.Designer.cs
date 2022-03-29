@@ -163,7 +163,9 @@ namespace SistemaSENAI
             this.Controls.Add(this.CheckBoxProf);
             this.Controls.Add(this.TxtBoxCPF);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Janela";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SistemaSENAI";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

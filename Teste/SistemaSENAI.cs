@@ -46,17 +46,19 @@ namespace SistemaSENAI
             }
             else if(TxtBoxSenha.Text == senhapadrao)
             {
-                senha.Show();
+                senha.ShowDialog();
             }
             else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxAluno.Checked)
             {
                 PagInicialAluno PIAluno = new PagInicialAluno();
-                PIAluno.Show();
+                PIAluno.ShowDialog();
+                this.Hide();
             }
             else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxProf.Checked)
             {
                 PagInicialProf PIProf = new PagInicialProf();
-                PIProf.Show();
+                PIProf.ShowDialog();
+                this.Hide();
             }
         }
 

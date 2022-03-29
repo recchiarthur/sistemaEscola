@@ -68,6 +68,7 @@
             this.buttonCalend.TabIndex = 1;
             this.buttonCalend.Text = "CALENDÁRIO";
             this.buttonCalend.UseVisualStyleBackColor = false;
+            this.buttonCalend.Click += new System.EventHandler(this.buttonCalend_Click);
             // 
             // buttonFaltas
             // 
@@ -80,6 +81,7 @@
             this.buttonFaltas.TabIndex = 3;
             this.buttonFaltas.Text = "FALTAS";
             this.buttonFaltas.UseVisualStyleBackColor = false;
+            this.buttonFaltas.Click += new System.EventHandler(this.buttonFaltas_Click);
             // 
             // buttonQuadro
             // 
@@ -92,6 +94,7 @@
             this.buttonQuadro.TabIndex = 2;
             this.buttonQuadro.Text = "QUADRO DE\r\nHORÁRIOS";
             this.buttonQuadro.UseVisualStyleBackColor = false;
+            this.buttonQuadro.Click += new System.EventHandler(this.buttonQuadro_Click);
             // 
             // buttonBoleto
             // 
@@ -104,6 +107,7 @@
             this.buttonBoleto.TabIndex = 5;
             this.buttonBoleto.Text = "EMITIR\r\nBOLETO";
             this.buttonBoleto.UseVisualStyleBackColor = false;
+            this.buttonBoleto.Click += new System.EventHandler(this.buttonBoleto_Click);
             // 
             // buttonRemat
             // 
@@ -116,6 +120,7 @@
             this.buttonRemat.TabIndex = 4;
             this.buttonRemat.Text = "REMATRÍCULA";
             this.buttonRemat.UseVisualStyleBackColor = false;
+            this.buttonRemat.Click += new System.EventHandler(this.buttonRemat_Click);
             // 
             // buttonGrade
             // 
@@ -128,7 +133,7 @@
             this.buttonGrade.TabIndex = 7;
             this.buttonGrade.Text = "GRADE\r\nCURRICULAR";
             this.buttonGrade.UseVisualStyleBackColor = false;
-            this.buttonGrade.Click += new System.EventHandler(this.buttonVoltar_Click);
+            this.buttonGrade.Click += new System.EventHandler(this.buttonGrade_Click);
             // 
             // buttonCart
             // 
@@ -141,11 +146,12 @@
             this.buttonCart.TabIndex = 6;
             this.buttonCart.Text = "CARTEIRINHA";
             this.buttonCart.UseVisualStyleBackColor = false;
+            this.buttonCart.Click += new System.EventHandler(this.buttonCart_Click);
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Quicksand", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Coral;
             this.label1.Location = new System.Drawing.Point(185, 9);
             this.label1.Name = "label1";
@@ -190,7 +196,9 @@
             this.Controls.Add(this.buttonNotas);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PagInicialAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Página inicial";
             this.Load += new System.EventHandler(this.PagInicial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

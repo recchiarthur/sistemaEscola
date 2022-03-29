@@ -118,7 +118,9 @@
             this.Controls.Add(this.buttonRegPresc);
             this.Controls.Add(this.buttonHorario);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "PagInicialProf";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Página Inicial";
             this.Load += new System.EventHandler(this.PagInicialProf_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

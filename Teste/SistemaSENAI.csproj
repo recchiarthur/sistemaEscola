@@ -47,6 +47,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boleto.Designer.cs">
+      <DependentUpon>Boleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendario.Designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carteirinha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carteirinha.Designer.cs">
+      <DependentUpon>Carteirinha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Faltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Faltas.Designer.cs">
+      <DependentUpon>Faltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradeCurricular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradeCurricular.Designer.cs">
+      <DependentUpon>GradeCurricular.cs</DependentUpon>
+    </Compile>
     <Compile Include="Notas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +95,23 @@
     <Compile Include="PagInicialProf.Designer.cs">
       <DependentUpon>PagInicialProf.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuadroDeHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuadroDeHorarios.Designer.cs">
+      <DependentUpon>QuadroDeHorarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="RedefinirSenha.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RedefinirSenha.Designer.cs">
       <DependentUpon>RedefinirSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rematricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rematricula.Designer.cs">
+      <DependentUpon>Rematricula.cs</DependentUpon>
     </Compile>
     <Compile Include="SistemaSENAI.cs">
       <SubType>Form</SubType>
@@ -79,6 +121,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Boleto.resx">
+      <DependentUpon>Boleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carteirinha.resx">
+      <DependentUpon>Carteirinha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Faltas.resx">
+      <DependentUpon>Faltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradeCurricular.resx">
+      <DependentUpon>GradeCurricular.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Notas.resx">
       <DependentUpon>Notas.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,8 +145,14 @@
     <EmbeddedResource Include="PagInicialProf.resx">
       <DependentUpon>PagInicialProf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuadroDeHorarios.resx">
+      <DependentUpon>QuadroDeHorarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RedefinirSenha.resx">
       <DependentUpon>RedefinirSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rematricula.resx">
+      <DependentUpon>Rematricula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SistemaSENAI.resx">
       <DependentUpon>SistemaSENAI.cs</DependentUpon>
