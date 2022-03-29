@@ -168,6 +168,7 @@ namespace SistemaSENAI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SistemaSENAI";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Janela_MouseDoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

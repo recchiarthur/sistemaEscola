@@ -100,5 +100,21 @@ namespace SistemaSENAI
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
             TxtBoxCPF.MaxLength = 11;
         }
+
+        private void Janela_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if(CheckBoxAluno.Checked)
+            {
+                PagInicialAluno PIAluno = new PagInicialAluno();
+                PIAluno.ShowDialog();
+                this.Hide();
+            }
+            else if(CheckBoxProf.Checked)
+            {
+                PagInicialAluno PIAluno = new PagInicialAluno();
+                PIAluno.ShowDialog();
+                this.Hide();
+            }
+        }
     }
 }

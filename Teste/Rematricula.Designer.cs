@@ -42,6 +42,7 @@
             this.buttonVoltar.TabIndex = 2;
             this.buttonVoltar.Text = "VOLTAR";
             this.buttonVoltar.UseVisualStyleBackColor = false;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
             // Rematricula
             // 

@@ -25,57 +25,65 @@ namespace SistemaSENAI
         private void buttonNotas_Click(object sender, EventArgs e)
         {
             Notas notas = new Notas();
-            notas.ShowDialog();
             this.Hide();
+            notas.ShowDialog();
+            this.Show();
         }
 
         private void buttonCalend_Click(object sender, EventArgs e)
         {
             Calendario calendario = new Calendario();
-            calendario.ShowDialog();
             this.Hide();
+            calendario.ShowDialog();
+            this.Show();
         }
 
         private void buttonQuadro_Click(object sender, EventArgs e)
         {
             QuadroDeHorarios quadroDeHorarios = new QuadroDeHorarios();
-            quadroDeHorarios.ShowDialog();
             this.Hide();
+            quadroDeHorarios.ShowDialog();
+            this.Show();
         }
 
         private void buttonFaltas_Click(object sender, EventArgs e)
         {
             Faltas faltas = new Faltas();
-            faltas.ShowDialog();
             this.Hide();
+            faltas.ShowDialog();
+            this.Show();
         }
 
         private void buttonRemat_Click(object sender, EventArgs e)
         {
             Rematricula rematricula = new Rematricula();
-            rematricula.ShowDialog();
             this.Hide();
+            rematricula.ShowDialog();
+            this.Show();
         }
 
         private void buttonBoleto_Click(object sender, EventArgs e)
         {
             Boleto boleto = new Boleto();
-            boleto.ShowDialog();
             this.Hide();
+            boleto.ShowDialog();
+            this.Show();
         }
 
         private void buttonCart_Click(object sender, EventArgs e)
         {
             Carteirinha carteirinha = new Carteirinha();
-            carteirinha.ShowDialog();
             this.Hide();
+            carteirinha.ShowDialog();
+            this.Show();
         }
 
         private void buttonGrade_Click(object sender, EventArgs e)
         {
             GradeCurricular gradeCurricular = new GradeCurricular();
-            gradeCurricular.ShowDialog();
             this.Hide();
+            gradeCurricular.ShowDialog();
+            this.Show();
         }
     }
 }

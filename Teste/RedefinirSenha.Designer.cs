@@ -126,6 +126,7 @@
             this.Controls.Add(this.NovaSenha);
             this.Controls.Add(this.LabelRedSenha);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "RedefinirSenha";
             this.Text = "Redefinir Senha";
             this.ResumeLayout(false);

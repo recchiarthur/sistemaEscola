@@ -42,8 +42,9 @@
             this.buttonVoltar.TabIndex = 2;
             this.buttonVoltar.Text = "VOLTAR";
             this.buttonVoltar.UseVisualStyleBackColor = false;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // QuadroDeHorários
+            // QuadroDeHorarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -51,7 +52,7 @@
             this.ClientSize = new System.Drawing.Size(923, 534);
             this.Controls.Add(this.buttonVoltar);
             this.MaximizeBox = false;
-            this.Name = "QuadroDeHorários";
+            this.Name = "QuadroDeHorarios";
             this.Text = "Quadro de horários";
             this.ResumeLayout(false);
 
