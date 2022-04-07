@@ -58,6 +58,7 @@
             this.buttonHorario.TabIndex = 1;
             this.buttonHorario.Text = "HORÁRIO";
             this.buttonHorario.UseVisualStyleBackColor = false;
+            this.buttonHorario.Click += new System.EventHandler(this.buttonHorario_Click);
             // 
             // buttonRegPresc
             // 
@@ -70,6 +71,7 @@
             this.buttonRegPresc.TabIndex = 2;
             this.buttonRegPresc.Text = "REGISTRAR\r\nPRESENÇA";
             this.buttonRegPresc.UseVisualStyleBackColor = false;
+            this.buttonRegPresc.Click += new System.EventHandler(this.buttonRegPresc_Click);
             // 
             // buttonRegNotas
             // 
@@ -82,6 +84,7 @@
             this.buttonRegNotas.TabIndex = 3;
             this.buttonRegNotas.Text = "REGISTRAR NOTAS";
             this.buttonRegNotas.UseVisualStyleBackColor = false;
+            this.buttonRegNotas.Click += new System.EventHandler(this.buttonRegNotas_Click);
             // 
             // buttonPlan
             // 
@@ -94,6 +97,7 @@
             this.buttonPlan.TabIndex = 4;
             this.buttonPlan.Text = "PLANEJAR\r\nAULAS";
             this.buttonPlan.UseVisualStyleBackColor = false;
+            this.buttonPlan.Click += new System.EventHandler(this.buttonPlan_Click);
             // 
             // label1
             // 

@@ -77,6 +77,12 @@
     <Compile Include="GradeCurricular.Designer.cs">
       <DependentUpon>GradeCurricular.cs</DependentUpon>
     </Compile>
+    <Compile Include="HorarioProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HorarioProf.Designer.cs">
+      <DependentUpon>HorarioProf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Notas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,18 @@
     <Compile Include="PagInicialProf.Designer.cs">
       <DependentUpon>PagInicialProf.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlanAulasProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanAulasProf.Designer.cs">
+      <DependentUpon>PlanAulasProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresencaProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresencaProf.Designer.cs">
+      <DependentUpon>PresencaProf.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuadroDeHorarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +124,12 @@
     </Compile>
     <Compile Include="RedefinirSenha.Designer.cs">
       <DependentUpon>RedefinirSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegNotasProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegNotasProf.Designer.cs">
+      <DependentUpon>RegNotasProf.cs</DependentUpon>
     </Compile>
     <Compile Include="Rematricula.cs">
       <SubType>Form</SubType>
@@ -136,6 +160,9 @@
     <EmbeddedResource Include="GradeCurricular.resx">
       <DependentUpon>GradeCurricular.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HorarioProf.resx">
+      <DependentUpon>HorarioProf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Notas.resx">
       <DependentUpon>Notas.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,11 +172,20 @@
     <EmbeddedResource Include="PagInicialProf.resx">
       <DependentUpon>PagInicialProf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlanAulasProf.resx">
+      <DependentUpon>PlanAulasProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresencaProf.resx">
+      <DependentUpon>PresencaProf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuadroDeHorarios.resx">
       <DependentUpon>QuadroDeHorarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RedefinirSenha.resx">
       <DependentUpon>RedefinirSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegNotasProf.resx">
+      <DependentUpon>RegNotasProf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rematricula.resx">
       <DependentUpon>Rematricula.cs</DependentUpon>

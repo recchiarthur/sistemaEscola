@@ -111,8 +111,8 @@ namespace SistemaSENAI
             }
             else if(CheckBoxProf.Checked)
             {
-                PagInicialAluno PIAluno = new PagInicialAluno();
-                PIAluno.ShowDialog();
+                PagInicialProf PIProf = new PagInicialProf();
+                PIProf.ShowDialog();
                 this.Hide();
             }
         }
