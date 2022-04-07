@@ -101,6 +101,12 @@
     <Compile Include="PagInicialProf.Designer.cs">
       <DependentUpon>PagInicialProf.cs</DependentUpon>
     </Compile>
+    <Compile Include="PagInicialResp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagInicialResp.Designer.cs">
+      <DependentUpon>PagInicialResp.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlanAulasProf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PagInicialProf.resx">
       <DependentUpon>PagInicialProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagInicialResp.resx">
+      <DependentUpon>PagInicialResp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlanAulasProf.resx">
       <DependentUpon>PlanAulasProf.cs</DependentUpon>

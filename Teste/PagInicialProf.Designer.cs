@@ -52,7 +52,7 @@
             this.buttonHorario.BackColor = System.Drawing.Color.DarkRed;
             this.buttonHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.buttonHorario.ForeColor = System.Drawing.Color.Coral;
-            this.buttonHorario.Location = new System.Drawing.Point(0, 98);
+            this.buttonHorario.Location = new System.Drawing.Point(0, 101);
             this.buttonHorario.Name = "buttonHorario";
             this.buttonHorario.Size = new System.Drawing.Size(166, 68);
             this.buttonHorario.TabIndex = 1;
@@ -65,7 +65,7 @@
             this.buttonRegPresc.BackColor = System.Drawing.Color.DarkRed;
             this.buttonRegPresc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.buttonRegPresc.ForeColor = System.Drawing.Color.Coral;
-            this.buttonRegPresc.Location = new System.Drawing.Point(0, 172);
+            this.buttonRegPresc.Location = new System.Drawing.Point(0, 175);
             this.buttonRegPresc.Name = "buttonRegPresc";
             this.buttonRegPresc.Size = new System.Drawing.Size(166, 68);
             this.buttonRegPresc.TabIndex = 2;
@@ -78,7 +78,7 @@
             this.buttonRegNotas.BackColor = System.Drawing.Color.DarkRed;
             this.buttonRegNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.buttonRegNotas.ForeColor = System.Drawing.Color.Coral;
-            this.buttonRegNotas.Location = new System.Drawing.Point(0, 246);
+            this.buttonRegNotas.Location = new System.Drawing.Point(0, 249);
             this.buttonRegNotas.Name = "buttonRegNotas";
             this.buttonRegNotas.Size = new System.Drawing.Size(166, 68);
             this.buttonRegNotas.TabIndex = 3;
@@ -91,7 +91,7 @@
             this.buttonPlan.BackColor = System.Drawing.Color.DarkRed;
             this.buttonPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.buttonPlan.ForeColor = System.Drawing.Color.Coral;
-            this.buttonPlan.Location = new System.Drawing.Point(0, 320);
+            this.buttonPlan.Location = new System.Drawing.Point(0, 323);
             this.buttonPlan.Name = "buttonPlan";
             this.buttonPlan.Size = new System.Drawing.Size(166, 68);
             this.buttonPlan.TabIndex = 4;
@@ -115,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(907, 495);
+            this.ClientSize = new System.Drawing.Size(923, 534);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonPlan);
             this.Controls.Add(this.buttonRegNotas);

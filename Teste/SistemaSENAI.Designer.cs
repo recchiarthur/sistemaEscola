@@ -40,6 +40,7 @@ namespace SistemaSENAI
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.CheckBoxResp = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // TxtBoxCPF
@@ -58,7 +59,7 @@ namespace SistemaSENAI
             this.CheckBoxAluno.AutoSize = true;
             this.CheckBoxAluno.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxAluno.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxAluno.Location = new System.Drawing.Point(596, 104);
+            this.CheckBoxAluno.Location = new System.Drawing.Point(596, 74);
             this.CheckBoxAluno.Name = "CheckBoxAluno";
             this.CheckBoxAluno.Size = new System.Drawing.Size(77, 27);
             this.CheckBoxAluno.TabIndex = 0;
@@ -71,7 +72,7 @@ namespace SistemaSENAI
             this.CheckBoxProf.AutoSize = true;
             this.CheckBoxProf.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxProf.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxProf.Location = new System.Drawing.Point(596, 137);
+            this.CheckBoxProf.Location = new System.Drawing.Point(596, 107);
             this.CheckBoxProf.Name = "CheckBoxProf";
             this.CheckBoxProf.Size = new System.Drawing.Size(115, 27);
             this.CheckBoxProf.TabIndex = 1;
@@ -142,9 +143,21 @@ namespace SistemaSENAI
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(600, 294);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 16);
+            this.label3.Size = new System.Drawing.Size(95, 16);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Senha padrão: 123456";
+            this.label3.Text = "Senha padrão: ";
+            // 
+            // CheckBoxResp
+            // 
+            this.CheckBoxResp.AutoSize = true;
+            this.CheckBoxResp.BackColor = System.Drawing.Color.Transparent;
+            this.CheckBoxResp.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBoxResp.Location = new System.Drawing.Point(595, 140);
+            this.CheckBoxResp.Name = "CheckBoxResp";
+            this.CheckBoxResp.Size = new System.Drawing.Size(141, 27);
+            this.CheckBoxResp.TabIndex = 9;
+            this.CheckBoxResp.Text = "Responsável";
+            this.CheckBoxResp.UseVisualStyleBackColor = false;
             // 
             // Janela
             // 
@@ -153,6 +166,7 @@ namespace SistemaSENAI
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(923, 534);
+            this.Controls.Add(this.CheckBoxResp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -162,6 +176,7 @@ namespace SistemaSENAI
             this.Controls.Add(this.CheckBoxAluno);
             this.Controls.Add(this.CheckBoxProf);
             this.Controls.Add(this.TxtBoxCPF);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Janela";
@@ -184,6 +199,7 @@ namespace SistemaSENAI
         private Button button1;
         private Button button2;
         private Label label3;
+        private CheckBox CheckBoxResp;
     }
 }
 

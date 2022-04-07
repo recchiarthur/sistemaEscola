@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace SistemaSENAI
 {
@@ -17,13 +18,51 @@ namespace SistemaSENAI
             InitializeComponent();
         }
 
-        string senhapadrao = "123456";
+        internal static readonly char[] chars =
+            "1234567890".ToCharArray();
 
+        public static string GetUniqueKey(int size)
+        {
+            byte[] data = new byte[4 * size];
+            using (var crypto = RandomNumberGenerator.Create())
+            {
+                crypto.GetBytes(data);
+            }
+            StringBuilder result = new StringBuilder(size);
+            for (int i = 0; i < size; i++)
+            {
+                var rnd = BitConverter.ToUInt32(data, i * 4);
+                var idx = rnd % chars.Length;
+
+                result.Append(chars[idx]);
+            }
+
+            return result.ToString();
+        }
+
+        public static string GetUniqueKeyOriginal_BIASED(int size)
+        {
+            char[] chars =
+                "1234567890".ToCharArray();
+            byte[] data = new byte[size];
+            using (RNGCryptoServiceProvider crypto = new RNGCryptoServiceProvider())
+            {
+                crypto.GetBytes(data);
+            }
+            StringBuilder result = new StringBuilder(size);
+            foreach (byte b in data)
+            {
+                result.Append(chars[b % (chars.Length)]);
+            }
+            return result.ToString();
+        }
+
+        string senhapadrao = GetUniqueKey(6);
         RedefinirSenha senha = new RedefinirSenha();
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        
+            label3.Text = "Senha padrão: " + senhapadrao;
         }
 
         private void TxtBoxCPF_KeyPress(object sender, KeyPressEventArgs e)
@@ -36,9 +75,9 @@ namespace SistemaSENAI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!CheckBoxAluno.Checked && !CheckBoxProf.Checked)
+            if (!CheckBoxAluno.Checked && !CheckBoxProf.Checked && !CheckBoxResp.Checked)
             {
-                MessageBox.Show("Selecione se você é professor ou aluno!");
+                MessageBox.Show("Selecione se você é professor, aluno ou responsável!");
             }
             else if (TxtBoxCPF.Text.Length < 11)
             {
@@ -58,6 +97,12 @@ namespace SistemaSENAI
             {
                 PagInicialProf PIProf = new PagInicialProf();
                 PIProf.ShowDialog();
+                this.Hide();
+            }
+            else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxResp.Checked)
+            {
+                PagInicialResp PIResp = new PagInicialResp();
+                PIResp.ShowDialog();
                 this.Hide();
             }
         }
@@ -113,6 +158,12 @@ namespace SistemaSENAI
             {
                 PagInicialProf PIProf = new PagInicialProf();
                 PIProf.ShowDialog();
+                this.Hide();
+            }
+            else if(CheckBoxResp.Checked)
+            {
+                PagInicialResp PIResp = new PagInicialResp();
+                PIResp.ShowDialog();
                 this.Hide();
             }
         }
