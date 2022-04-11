@@ -129,6 +129,7 @@ namespace SistemaSENAI
             if (CheckBoxAluno.Checked == true)
             {
                 CheckBoxProf.Checked = false;
+                CheckBoxResp.Checked = false;
             }
         }
 
@@ -137,6 +138,16 @@ namespace SistemaSENAI
             if (CheckBoxProf.Checked == true)
             {
                 CheckBoxAluno.Checked = false;
+                CheckBoxResp.Checked = false;
+            }
+        }
+
+        private void CheckBoxResp_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBoxResp.Checked == true)
+            {
+                CheckBoxAluno.Checked = false;
+                CheckBoxProf.Checked = false;
             }
         }
 
@@ -167,5 +178,6 @@ namespace SistemaSENAI
                 this.Hide();
             }
         }
+
     }
 }

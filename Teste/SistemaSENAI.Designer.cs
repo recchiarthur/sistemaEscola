@@ -152,12 +152,13 @@ namespace SistemaSENAI
             this.CheckBoxResp.AutoSize = true;
             this.CheckBoxResp.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxResp.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxResp.Location = new System.Drawing.Point(595, 140);
+            this.CheckBoxResp.Location = new System.Drawing.Point(597, 142);
             this.CheckBoxResp.Name = "CheckBoxResp";
             this.CheckBoxResp.Size = new System.Drawing.Size(141, 27);
             this.CheckBoxResp.TabIndex = 9;
             this.CheckBoxResp.Text = "Responsável";
             this.CheckBoxResp.UseVisualStyleBackColor = false;
+            this.CheckBoxResp.CheckedChanged += new System.EventHandler(this.CheckBoxResp_CheckedChanged);
             // 
             // Janela
             // 
