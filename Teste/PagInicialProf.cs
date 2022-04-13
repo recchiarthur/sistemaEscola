@@ -25,25 +25,38 @@ namespace SistemaSENAI
         private void buttonHorario_Click(object sender, EventArgs e)
         {
             HorarioProf horarioProf = new HorarioProf();
+            this.Hide();
             horarioProf.ShowDialog();
+            this.Show();
         }
 
         private void buttonRegPresc_Click(object sender, EventArgs e)
         {
             PresencaProf presencaProf = new PresencaProf();
+            this.Hide();
             presencaProf.ShowDialog();
+            this.Show();
         }
 
         private void buttonRegNotas_Click(object sender, EventArgs e)
         {
             RegNotasProf regNotasProf = new RegNotasProf();
+            this.Hide();
             regNotasProf.ShowDialog();
+            this.Show();
         }
 
         private void buttonPlan_Click(object sender, EventArgs e)
         {
             PlanAulasProf planAulasProf = new PlanAulasProf();
+            this.Hide();
             planAulasProf.ShowDialog();
+            this.Show();
+        }
+
+        private void PagInicialProf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

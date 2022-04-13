@@ -85,5 +85,10 @@ namespace SistemaSENAI
             gradeCurricular.ShowDialog();
             this.Show();
         }
+
+        private void PagInicialAluno_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

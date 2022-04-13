@@ -177,7 +177,7 @@ namespace SistemaSENAI
             this.Controls.Add(this.CheckBoxAluno);
             this.Controls.Add(this.CheckBoxProf);
             this.Controls.Add(this.TxtBoxCPF);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Janela";

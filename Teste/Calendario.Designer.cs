@@ -44,14 +44,16 @@
             this.buttonVoltar.UseVisualStyleBackColor = false;
             this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // Calendário
+            // Calendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(923, 534);
             this.Controls.Add(this.buttonVoltar);
-            this.Name = "Calendário";
+            this.MaximizeBox = false;
+            this.Name = "Calendario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calendário";
             this.ResumeLayout(false);
 

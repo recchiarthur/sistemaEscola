@@ -200,6 +200,7 @@
             this.Name = "PagInicialAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Página inicial";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PagInicialAluno_FormClosed);
             this.Load += new System.EventHandler(this.PagInicial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

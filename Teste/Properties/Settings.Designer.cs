@@ -22,5 +22,14 @@ namespace SistemaSENAI.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        public string Configuração {
+            get {
+                return ((string)(this["Configuração"]));
+            }
+        }
     }
 }

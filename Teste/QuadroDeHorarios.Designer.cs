@@ -53,6 +53,7 @@
             this.Controls.Add(this.buttonVoltar);
             this.MaximizeBox = false;
             this.Name = "QuadroDeHorarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quadro de horários";
             this.ResumeLayout(false);
 

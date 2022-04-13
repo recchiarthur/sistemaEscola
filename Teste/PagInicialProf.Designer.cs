@@ -126,6 +126,7 @@
             this.Name = "PagInicialProf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Página Inicial";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PagInicialProf_FormClosed);
             this.Load += new System.EventHandler(this.PagInicialProf_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

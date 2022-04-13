@@ -90,20 +90,20 @@ namespace SistemaSENAI
             else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxAluno.Checked)
             {
                 PagInicialAluno PIAluno = new PagInicialAluno();
-                PIAluno.ShowDialog();
                 this.Hide();
+                PIAluno.ShowDialog();
             }
             else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxProf.Checked)
             {
                 PagInicialProf PIProf = new PagInicialProf();
-                PIProf.ShowDialog();
                 this.Hide();
+                PIProf.ShowDialog();
             }
             else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxResp.Checked)
             {
                 PagInicialResp PIResp = new PagInicialResp();
-                PIResp.ShowDialog();
                 this.Hide();
+                PIResp.ShowDialog();
             }
         }
 

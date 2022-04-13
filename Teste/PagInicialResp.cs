@@ -20,29 +20,37 @@ namespace SistemaSENAI
         private void buttonFaltasResp_Click(object sender, EventArgs e)
         {
             Faltas faltas = new Faltas();
-            faltas.ShowDialog();
             this.Hide();
+            faltas.ShowDialog();
+            this.Show();
         }
 
         private void buttonNotasResp_Click(object sender, EventArgs e)
         {
             Notas notas = new Notas();
-            notas.ShowDialog();
             this.Hide();
+            notas.ShowDialog();
+            this.Show();
         }
 
         private void buttonBoletoResp_Click(object sender, EventArgs e)
         {
             Boleto boleto = new Boleto();
-            boleto.ShowDialog();
             this.Hide();
+            boleto.ShowDialog();
         }
 
         private void buttonHorarioResp_Click(object sender, EventArgs e)
         {
             QuadroDeHorarios quadroDeHorarios = new QuadroDeHorarios();
-            quadroDeHorarios.ShowDialog();
             this.Hide();
+            quadroDeHorarios.ShowDialog();
+            this.Show();
+        }
+
+        private void PagInicialResp_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

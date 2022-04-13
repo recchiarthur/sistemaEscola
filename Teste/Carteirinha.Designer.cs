@@ -51,7 +51,9 @@
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(923, 534);
             this.Controls.Add(this.buttonVoltar);
+            this.MaximizeBox = false;
             this.Name = "Carteirinha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carteirinha";
             this.ResumeLayout(false);
 
