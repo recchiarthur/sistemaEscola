@@ -1,5 +1,4 @@
-﻿
-namespace SistemaSENAI
+﻿namespace SistemaSENAI
 {
     partial class Notas
     {
@@ -29,8 +28,9 @@ namespace SistemaSENAI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Notas));
             this.buttonVoltar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonVoltar
@@ -41,10 +41,29 @@ namespace SistemaSENAI
             this.buttonVoltar.Location = new System.Drawing.Point(0, 468);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(166, 68);
-            this.buttonVoltar.TabIndex = 1;
+            this.buttonVoltar.TabIndex = 3;
             this.buttonVoltar.Text = "VOLTAR";
             this.buttonVoltar.UseVisualStyleBackColor = false;
-            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.Location = new System.Drawing.Point(202, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 31);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nota:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label2.Location = new System.Drawing.Point(205, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 31);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "label2";
             // 
             // Notas
             // 
@@ -52,18 +71,21 @@ namespace SistemaSENAI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(923, 534);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonVoltar);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "Notas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notas";
+            this.Load += new System.EventHandler(this.Notas_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button buttonVoltar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

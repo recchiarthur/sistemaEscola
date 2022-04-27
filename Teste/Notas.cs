@@ -17,9 +17,11 @@ namespace SistemaSENAI
             InitializeComponent();
         }
 
-        private void buttonVoltar_Click(object sender, EventArgs e)
+        private void Notas_Load(object sender, EventArgs e)
         {
-            this.Hide();
+            bdsistemaescolaEntities entities = new bdsistemaescolaEntities();
+            var pprofessor = entities.Professor.FirstOrDefault();
+            label2.Text = pprofessor.email;
         }
     }
 }

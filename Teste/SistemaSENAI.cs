@@ -16,6 +16,10 @@ namespace SistemaSENAI
         public Janela()
         {
             InitializeComponent();
+
+            //bdsistemaescolaEntities entities = new bdsistemaescolaEntities();
+            //var quatro = entities.Aluno.FirstOrDefault(a => a.idAluno == 4);
+            //label1.Text = quatro.nome;
         }
 
         internal static readonly char[] chars =
