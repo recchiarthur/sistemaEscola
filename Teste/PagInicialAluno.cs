@@ -27,7 +27,7 @@ namespace SistemaSENAI
             Notas notas = new Notas();
             this.Hide();
             notas.ShowDialog();
-            this.Show();
+            notas.Show();
         }
 
         private void buttonCalend_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace SistemaSENAI
             Calendario calendario = new Calendario();
             this.Hide();
             calendario.ShowDialog();
-            this.Show();
+            calendario.Show();
         }
 
         private void buttonQuadro_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace SistemaSENAI
             QuadroDeHorarios quadroDeHorarios = new QuadroDeHorarios();
             this.Hide();
             quadroDeHorarios.ShowDialog();
-            this.Show();
+            quadroDeHorarios.Show();
         }
 
         private void buttonFaltas_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace SistemaSENAI
             Faltas faltas = new Faltas();
             this.Hide();
             faltas.ShowDialog();
-            this.Show();
+            faltas.Show();
         }
 
         private void buttonRemat_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace SistemaSENAI
             Rematricula rematricula = new Rematricula();
             this.Hide();
             rematricula.ShowDialog();
-            this.Show();
+            rematricula.Show();
         }
 
         private void buttonBoleto_Click(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace SistemaSENAI
             Boleto boleto = new Boleto();
             this.Hide();
             boleto.ShowDialog();
-            this.Show();
+            boleto.Show();
         }
 
         private void buttonCart_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace SistemaSENAI
             Carteirinha carteirinha = new Carteirinha();
             this.Hide();
             carteirinha.ShowDialog();
-            this.Show();
+            carteirinha.Show();
         }
 
         private void buttonGrade_Click(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace SistemaSENAI
             GradeCurricular gradeCurricular = new GradeCurricular();
             this.Hide();
             gradeCurricular.ShowDialog();
-            this.Show();
+            gradeCurricular.Show();
         }
 
         private void PagInicialAluno_FormClosed(object sender, FormClosedEventArgs e)

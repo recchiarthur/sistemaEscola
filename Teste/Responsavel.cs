@@ -25,7 +25,7 @@ namespace SistemaSENAI
         public string nome { get; set; }
         public string sobrenome { get; set; }
         public string email { get; set; }
-        public Nullable<int> telefone { get; set; }
+        public string telefone { get; set; }
         public Nullable<int> CPF { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

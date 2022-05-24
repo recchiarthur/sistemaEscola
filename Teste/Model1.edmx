@@ -316,7 +316,7 @@
           <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="sobrenome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="telefone" Type="Int32" />
+          <Property Name="telefone" Type="String" />
           <NavigationProperty Name="disciplina_turma_professor" Relationship="Self.FK__disciplin__Profe__25869641" FromRole="Professor" ToRole="disciplina_turma_professor" />
         </EntityType>
         <EntityType Name="Responsavel">
@@ -328,7 +328,7 @@
           <Property Name="nome" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <Property Name="sobrenome" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="telefone" Type="Int32" />
+          <Property Name="telefone" Type="String" />
           <Property Name="CPF" Type="Int32" />
           <NavigationProperty Name="Aluno" Relationship="Self.FK__Aluno__Responsav__1BFD2C07" FromRole="Responsavel" ToRole="Aluno" />
           <NavigationProperty Name="grau_parentesco" Relationship="Self.FK__Responsav__grau___164452B1" FromRole="Responsavel" ToRole="grau_parentesco" />
