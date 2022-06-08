@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using System.Data.SqlClient;
 
 namespace SistemaSENAI
 {
@@ -79,6 +80,10 @@ namespace SistemaSENAI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Server=NOME_DO_SERVIDOR;Database=NOME_DO_BANCO;Trusted_Connection=True;
+
+            //SqlCommand select = new SqlCommand("select * from Aluno", );
+
             if (!CheckBoxAluno.Checked && !CheckBoxProf.Checked && !CheckBoxResp.Checked)
             {
                 MessageBox.Show("Selecione se você é professor, aluno ou responsável!");

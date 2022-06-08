@@ -14,8 +14,8 @@
           <Property Name="turmas_id_turmas" Type="int" Nullable="false" />
           <Property Name="nome" Type="varchar" MaxLength="50" />
           <Property Name="sobrenome" Type="varchar" MaxLength="50" />
-          <Property Name="email" Type="varchar" MaxLength="30" />
-          <Property Name="telefone" Type="varchar" MaxLength="15" />
+          <Property Name="email" Type="varchar" MaxLength="60" />
+          <Property Name="telefone" Type="varchar" MaxLength="25" />
           <Property Name="turma" Type="int" />
           <Property Name="cpf" Type="varchar" MaxLength="11" />
           <Property Name="senha" Type="varchar(max)" />
@@ -26,7 +26,7 @@
           </Key>
           <Property Name="id_curso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="duracao" Type="float" />
-          <Property Name="nome" Type="varchar" MaxLength="1" />
+          <Property Name="nome" Type="varchar" MaxLength="60" />
         </EntityType>
         <EntityType Name="disciplina">
           <Key>
@@ -34,7 +34,7 @@
           </Key>
           <Property Name="id_disciplina" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="notas_id_notas" Type="int" Nullable="false" />
-          <Property Name="nome" Type="varchar" MaxLength="1" />
+          <Property Name="nome" Type="varchar" MaxLength="50" />
           <Property Name="carga_horaria" Type="int" />
         </EntityType>
         <EntityType Name="disciplina_turma_professor">
@@ -51,7 +51,7 @@
             <PropertyRef Name="id_grau" />
           </Key>
           <Property Name="id_grau" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="grau" Type="varchar" MaxLength="1" />
+          <Property Name="grau" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Professor">
           <Key>
@@ -69,11 +69,11 @@
           </Key>
           <Property Name="idResponsavel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="grau_parentesco_id_grau" Type="int" Nullable="false" />
-          <Property Name="nome" Type="varchar" MaxLength="1" />
-          <Property Name="sobrenome" Type="varchar" MaxLength="1" />
-          <Property Name="email" Type="varchar" MaxLength="1" />
+          <Property Name="nome" Type="varchar" MaxLength="50" />
+          <Property Name="sobrenome" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
           <Property Name="telefone" Type="varchar" MaxLength="15" />
-          <Property Name="CPF" Type="int" />
+          <Property Name="CPF" Type="varchar" MaxLength="11" />
         </EntityType>
         <EntityType Name="tbnotas">
           <Key>
@@ -164,7 +164,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Responsav__grau___164452B1">
-          <End Role="grau_parentesco" Type="Self.grau_parentesco" Multiplicity="1" />
+          <End Role="grau_parentesco" Type="Self.grau_parentesco" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Responsavel" Type="Self.Responsavel" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="grau_parentesco">
@@ -259,8 +261,8 @@
           <Property Name="turmas_id_turmas" Type="Int32" Nullable="false" />
           <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="sobrenome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="telefone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="turma" Type="Int32" />
           <Property Name="cpf" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="senha" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -274,7 +276,7 @@
           </Key>
           <Property Name="id_curso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="duracao" Type="Double" />
-          <Property Name="nome" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="nome" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="turmas" Relationship="Self.FK__turmas__curso_id__1920BF5C" FromRole="curso" ToRole="turmas" />
         </EntityType>
         <EntityType Name="disciplina">
@@ -283,7 +285,7 @@
           </Key>
           <Property Name="id_disciplina" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="notas_id_notas" Type="Int32" Nullable="false" />
-          <Property Name="nome" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="carga_horaria" Type="Int32" />
           <NavigationProperty Name="disciplina_turma_professor" Relationship="Self.FK__disciplin__disci__267ABA7A" FromRole="disciplina" ToRole="disciplina_turma_professor" />
           <NavigationProperty Name="tbnotas" Relationship="Self.FK__disciplin__notas__22AA2996" FromRole="disciplina" ToRole="tbnotas" />
@@ -305,7 +307,7 @@
             <PropertyRef Name="id_grau" />
           </Key>
           <Property Name="id_grau" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="grau" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="grau" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Responsavel" Relationship="Self.FK__Responsav__grau___164452B1" FromRole="grau_parentesco" ToRole="Responsavel" />
         </EntityType>
         <EntityType Name="Professor">
@@ -316,7 +318,7 @@
           <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="sobrenome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="telefone" Type="String" />
+          <Property Name="telefone" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="disciplina_turma_professor" Relationship="Self.FK__disciplin__Profe__25869641" FromRole="Professor" ToRole="disciplina_turma_professor" />
         </EntityType>
         <EntityType Name="Responsavel">
@@ -325,11 +327,11 @@
           </Key>
           <Property Name="idResponsavel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="grau_parentesco_id_grau" Type="Int32" Nullable="false" />
-          <Property Name="nome" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="sobrenome" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="telefone" Type="String" />
-          <Property Name="CPF" Type="Int32" />
+          <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sobrenome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="telefone" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="CPF" Type="String" />
           <NavigationProperty Name="Aluno" Relationship="Self.FK__Aluno__Responsav__1BFD2C07" FromRole="Responsavel" ToRole="Aluno" />
           <NavigationProperty Name="grau_parentesco" Relationship="Self.FK__Responsav__grau___164452B1" FromRole="Responsavel" ToRole="grau_parentesco" />
         </EntityType>
