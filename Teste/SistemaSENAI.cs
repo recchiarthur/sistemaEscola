@@ -17,103 +17,79 @@ namespace SistemaSENAI
         public Janela()
         {
             InitializeComponent();
-
-            //bdsistemaescolaEntities entities = new bdsistemaescolaEntities();
-            //var quatro = entities.Aluno.FirstOrDefault(a => a.idAluno == 4);
-            //label1.Text = quatro.nome;
         }
 
-        internal static readonly char[] chars =
-            "1234567890".ToCharArray();
+        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF122\TEW_SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
-        public static string GetUniqueKey(int size)
+        public void ValidacaoEntrar()
         {
-            byte[] data = new byte[4 * size];
-            using (var crypto = RandomNumberGenerator.Create())
-            {
-                crypto.GetBytes(data);
-            }
-            StringBuilder result = new StringBuilder(size);
-            for (int i = 0; i < size; i++)
-            {
-                var rnd = BitConverter.ToUInt32(data, i * 4);
-                var idx = rnd % chars.Length;
-
-                result.Append(chars[idx]);
-            }
-
-            return result.ToString();
-        }
-
-        public static string GetUniqueKeyOriginal_BIASED(int size)
-        {
-            char[] chars =
-                "1234567890".ToCharArray();
-            byte[] data = new byte[size];
-            using (RNGCryptoServiceProvider crypto = new RNGCryptoServiceProvider())
-            {
-                crypto.GetBytes(data);
-            }
-            StringBuilder result = new StringBuilder(size);
-            foreach (byte b in data)
-            {
-                result.Append(chars[b % (chars.Length)]);
-            }
-            return result.ToString();
-        }
-
-        string senhapadrao = GetUniqueKey(6);
-        RedefinirSenha senha = new RedefinirSenha();
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            label3.Text = "Senha padrão: " + senhapadrao;
-        }
-
-        private void TxtBoxCPF_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
-
-        private void TxtBoxCPF_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Server=NOME_DO_SERVIDOR;Database=NOME_DO_BANCO;Trusted_Connection=True;
-
-            //SqlCommand select = new SqlCommand("select * from Aluno", );
-
             if (!CheckBoxAluno.Checked && !CheckBoxProf.Checked && !CheckBoxResp.Checked)
             {
                 MessageBox.Show("Selecione se você é professor, aluno ou responsável!");
             }
-            else if (TxtBoxCPF.Text.Length < 11)
+            if (CheckBoxAluno.Checked)
             {
-                MessageBox.Show("Insira o CPF corretamente!");
-            }
-            else if(TxtBoxSenha.Text == senhapadrao)
-            {
-                senha.ShowDialog();
-            }
-            else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxAluno.Checked)
-            {
+                SqlCommand select = new SqlCommand("select * from Aluno where email = @email and senha = @senha", conexao);
+                select.Parameters.AddWithValue("@email", TxtBoxEmail.Text);
+                select.Parameters.AddWithValue("@senha", TxtBoxSenha.Text);
+                conexao.Open();
+                SqlDataReader dataReader = select.ExecuteReader();
+                if (TxtBoxEmail.Text.Length < 11 || !dataReader.HasRows)
+                {
+                    MessageBox.Show("CPF ou senha incorretos!");
+                    conexao.Close();
+                    return;
+                }
                 PagInicialAluno PIAluno = new PagInicialAluno();
                 this.Hide();
                 PIAluno.ShowDialog();
+                return;
             }
-            else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxProf.Checked)
+            if(CheckBoxProf.Checked)
             {
+                SqlCommand select = new SqlCommand("select * from Professor where email = @email and senha = @senha", conexao);
+                select.Parameters.AddWithValue("@email", TxtBoxEmail.Text);
+                select.Parameters.AddWithValue("@senha", TxtBoxSenha.Text);
+                conexao.Open();
+                SqlDataReader dataReader = select.ExecuteReader();
+                if (TxtBoxEmail.Text.Length < 11 || !dataReader.HasRows)
+                {
+                    MessageBox.Show("CPF ou senha incorretos!");
+                    conexao.Close();
+                    return;
+                }
                 PagInicialProf PIProf = new PagInicialProf();
                 this.Hide();
                 PIProf.ShowDialog();
+                return;
             }
-            else if(TxtBoxSenha.Text == senha.GetSenha() && CheckBoxResp.Checked)
+            if(CheckBoxResp.Checked)
             {
+                SqlCommand select = new SqlCommand("select * from Responsavel where email = @email and senha = @senha", conexao);
+                select.Parameters.AddWithValue("@email", TxtBoxEmail.Text);
+                select.Parameters.AddWithValue("@senha", TxtBoxSenha.Text);
+                conexao.Open();
+                SqlDataReader dataReader = select.ExecuteReader();
+                if (TxtBoxEmail.Text.Length < 11 || !dataReader.HasRows)
+                {
+                    MessageBox.Show("CPF ou senha incorretos!");
+                    conexao.Close();
+                    return;
+                }
                 PagInicialResp PIResp = new PagInicialResp();
                 this.Hide();
                 PIResp.ShowDialog();
+                return;
             }
+            
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ValidacaoEntrar();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -160,12 +136,6 @@ namespace SistemaSENAI
             }
         }
 
-        private void TxtBoxCPF_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-            TxtBoxCPF.MaxLength = 11;
-        }
-
         private void Janela_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if(CheckBoxAluno.Checked)
@@ -188,5 +158,12 @@ namespace SistemaSENAI
             }
         }
 
+        private void TxtBoxSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ValidacaoEntrar();
+            }
+        }
     }
 }
