@@ -44,26 +44,31 @@
             this.buttonVoltar.TabIndex = 3;
             this.buttonVoltar.Text = "VOLTAR";
             this.buttonVoltar.UseVisualStyleBackColor = false;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(202, 50);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.label1.ForeColor = System.Drawing.Color.MintCream;
+            this.label1.Location = new System.Drawing.Point(12, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 31);
+            this.label1.Size = new System.Drawing.Size(403, 46);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Nota:";
+            this.label1.Text = "Média geral do aluno:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.Location = new System.Drawing.Point(205, 94);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
+            this.label2.ForeColor = System.Drawing.Color.MintCream;
+            this.label2.Location = new System.Drawing.Point(12, 205);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 31);
+            this.label2.Size = new System.Drawing.Size(173, 63);
             this.label2.TabIndex = 5;
             this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Notas
             // 

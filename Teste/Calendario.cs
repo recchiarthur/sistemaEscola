@@ -21,5 +21,10 @@ namespace SistemaSENAI
         {
             this.Hide();
         }
+
+        private void Calendario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

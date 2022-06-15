@@ -55,6 +55,7 @@
             this.Name = "Faltas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Faltas";
+            this.Load += new System.EventHandler(this.Faltas_Load);
             this.ResumeLayout(false);
 
         }

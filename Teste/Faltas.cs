@@ -21,5 +21,10 @@ namespace SistemaSENAI
         {
             this.Hide();
         }
+
+        private void Faltas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

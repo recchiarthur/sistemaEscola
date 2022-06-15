@@ -27,10 +27,10 @@ namespace SistemaSENAI
 
         private void buttonNotasResp_Click(object sender, EventArgs e)
         {
-            Notas notas = new Notas();
-            this.Hide();
-            notas.ShowDialog();
-            this.Show();
+            //Notas notas = new Notas();
+            //this.Hide();
+            //notas.ShowDialog();
+            //this.Show();
         }
 
         private void buttonBoletoResp_Click(object sender, EventArgs e)
@@ -42,10 +42,10 @@ namespace SistemaSENAI
 
         private void buttonHorarioResp_Click(object sender, EventArgs e)
         {
-            QuadroDeHorarios quadroDeHorarios = new QuadroDeHorarios();
-            this.Hide();
-            quadroDeHorarios.ShowDialog();
-            this.Show();
+            //QuadroDeHorarios quadroDeHorarios = new QuadroDeHorarios();
+            //this.Hide();
+            //quadroDeHorarios.ShowDialog();
+            //this.Show();
         }
 
         private void PagInicialResp_FormClosed(object sender, FormClosedEventArgs e)

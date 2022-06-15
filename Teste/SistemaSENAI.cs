@@ -23,6 +23,7 @@ namespace SistemaSENAI
 
         public void ValidacaoEntrar()
         {
+            List<string> nomeAluno = new List<string>();
             if (!CheckBoxAluno.Checked && !CheckBoxProf.Checked && !CheckBoxResp.Checked)
             {
                 MessageBox.Show("Selecione se você é professor, aluno ou responsável!");
@@ -34,13 +35,18 @@ namespace SistemaSENAI
                 select.Parameters.AddWithValue("@senha", TxtBoxSenha.Text);
                 conexao.Open();
                 SqlDataReader dataReader = select.ExecuteReader();
+                while(dataReader.Read())
+                {
+                    nomeAluno.Add(dataReader[3].ToString());
+                    nomeAluno.Add(dataReader[4].ToString());
+                }
                 if (TxtBoxEmail.Text.Length < 11 || !dataReader.HasRows)
                 {
                     MessageBox.Show("CPF ou senha incorretos!");
                     conexao.Close();
                     return;
                 }
-                PagInicialAluno PIAluno = new PagInicialAluno();
+                PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno);
                 this.Hide();
                 PIAluno.ShowDialog();
                 return;
@@ -140,7 +146,8 @@ namespace SistemaSENAI
         {
             if(CheckBoxAluno.Checked)
             {
-                PagInicialAluno PIAluno = new PagInicialAluno();
+                List<string> lista = new List<string>();
+                PagInicialAluno PIAluno = new PagInicialAluno(lista);
                 PIAluno.ShowDialog();
                 this.Hide();
             }
