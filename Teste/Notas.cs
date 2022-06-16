@@ -39,7 +39,9 @@ namespace SistemaSENAI
 
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno);
+            PIAluno.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)

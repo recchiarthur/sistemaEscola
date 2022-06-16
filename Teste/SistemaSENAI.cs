@@ -144,25 +144,6 @@ namespace SistemaSENAI
 
         private void Janela_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if(CheckBoxAluno.Checked)
-            {
-                List<string> lista = new List<string>();
-                PagInicialAluno PIAluno = new PagInicialAluno(lista);
-                PIAluno.ShowDialog();
-                this.Hide();
-            }
-            else if(CheckBoxProf.Checked)
-            {
-                PagInicialProf PIProf = new PagInicialProf();
-                PIProf.ShowDialog();
-                this.Hide();
-            }
-            else if(CheckBoxResp.Checked)
-            {
-                PagInicialResp PIResp = new PagInicialResp();
-                PIResp.ShowDialog();
-                this.Hide();
-            }
         }
 
         private void TxtBoxSenha_KeyDown(object sender, KeyEventArgs e)

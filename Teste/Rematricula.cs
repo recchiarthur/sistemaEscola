@@ -12,6 +12,9 @@ namespace SistemaSENAI
 {
     public partial class Rematricula : Form
     {
+
+        //manda para o site
+
         public Rematricula()
         {
             InitializeComponent();
@@ -20,6 +23,11 @@ namespace SistemaSENAI
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void Rematricula_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

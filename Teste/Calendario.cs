@@ -20,6 +20,10 @@ namespace SistemaSENAI
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
+            List<string> list = new List<string>();
+            list.Add("Aluno");
+            PagInicialAluno PIAluno = new PagInicialAluno(list);
+            PIAluno.Show();
         }
 
         private void Calendario_Load(object sender, EventArgs e)

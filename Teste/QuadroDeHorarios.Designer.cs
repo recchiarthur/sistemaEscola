@@ -107,6 +107,7 @@
             this.Name = "QuadroDeHorarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quadro de horários";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuadroDeHorarios_FormClosing);
             this.Load += new System.EventHandler(this.QuadroDeHorarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

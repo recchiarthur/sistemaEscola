@@ -24,7 +24,9 @@ namespace SistemaSENAI
 
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno);
+            PIAluno.Show();
         }
 
         private void QuadroDeHorarios_Load(object sender, EventArgs e)
@@ -40,6 +42,11 @@ namespace SistemaSENAI
                 label4.Text = sqlDataReader[1].ToString();
             }
             conexao.Close();
+        }
+
+        private void QuadroDeHorarios_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

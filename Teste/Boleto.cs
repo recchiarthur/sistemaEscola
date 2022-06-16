@@ -12,6 +12,9 @@ namespace SistemaSENAI
 {
     public partial class Boleto : Form
     {
+
+        //manda para o site
+
         public Boleto()
         {
             InitializeComponent();

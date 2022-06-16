@@ -55,6 +55,7 @@
             this.Name = "Rematricula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rematrícula";
+            this.Load += new System.EventHandler(this.Rematricula_Load);
             this.ResumeLayout(false);
 
         }
