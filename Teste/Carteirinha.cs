@@ -16,9 +16,11 @@ namespace SistemaSENAI
         List<string> nomeAluno = new List<string>();
         string cpfAluno;
         string cursoAluno;
-        public Carteirinha(List<string> nomeAl)
+        public Carteirinha(List<string> nomeAl, string cpfAl, string cursoAl)
         {
             nomeAluno = nomeAl;
+            cpfAluno = cpfAl;
+            cursoAluno = cursoAl;
             InitializeComponent();
         }
 
@@ -27,24 +29,15 @@ namespace SistemaSENAI
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
+            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
+            PIAluno.Show();
         }
 
         private void Carteirinha_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select * from Aluno as a inner join turmas as t on turmas_id_turmas = id_turmas inner join curso as c on curso_id_curso = id_curso where a.nome = @nome and a.sobrenome = @sobrenome and a.cpf = @cpf and c.nome = @curso", conexao);
-            cmd.Parameters.AddWithValue("@nome", nomeAluno[0]);
-            cmd.Parameters.AddWithValue("@sobrenome", nomeAluno[1]);
-            cmd.Parameters.AddWithValue("@cpf", cpfAluno);
-            cmd.Parameters.AddWithValue("@curso", cursoAluno);
-            conexao.Open();
-            SqlDataReader sqlDataReader = cmd.ExecuteReader();
-            while (sqlDataReader.Read())
-            {
-                label8.Text = sqlDataReader[3].ToString() + sqlDataReader[4].ToString();
-                label9.Text = sqlDataReader[14].ToString();
-                label10.Text = sqlDataReader[8].ToString();
-            }
-            conexao.Close();
+            label8.Text = nomeAluno[0] + " " + nomeAluno[1];
+            label9.Text = cursoAluno;
+            label10.Text = cpfAluno;
         }
     }
 }

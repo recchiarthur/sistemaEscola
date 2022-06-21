@@ -14,9 +14,13 @@ namespace SistemaSENAI
     public partial class Notas : Form
     {
         List<string> nomeAluno = new List<string>();
-        public Notas(List<string> nomeAl)
+        string cpfAluno;
+        string cursoAluno;
+        public Notas(List<string> nomeAl, string cpfAl, string cursoAl)
         {
             nomeAluno = nomeAl;
+            cpfAluno = cpfAl;
+            cursoAluno = cursoAl;
             InitializeComponent();
         }
 
@@ -40,7 +44,7 @@ namespace SistemaSENAI
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno);
+            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
             PIAluno.Show();
         }
 
@@ -52,6 +56,11 @@ namespace SistemaSENAI
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Notas_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

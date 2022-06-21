@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,17 +13,23 @@ namespace SistemaSENAI
 {
     public partial class Calendario : Form
     {
-        public Calendario()
+        List<string> nomeAluno = new List<string>();
+        string cpfAluno;
+        string cursoAluno;
+        public Calendario(List<string> nomeAl, string cpfAl, string cursoAl)
         {
+            nomeAluno = nomeAl;
+            cpfAluno = cpfAl;
+            cursoAluno = cursoAl;
             InitializeComponent();
         }
+
+        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF122\TEW_SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            List<string> list = new List<string>();
-            list.Add("Aluno");
-            PagInicialAluno PIAluno = new PagInicialAluno(list);
+            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
             PIAluno.Show();
         }
 

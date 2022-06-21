@@ -81,6 +81,7 @@
             this.Controls.Add(this.buttonVoltar);
             this.Name = "Notas";
             this.Text = "Notas";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Notas_FormClosed);
             this.Load += new System.EventHandler(this.Notas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

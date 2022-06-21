@@ -14,9 +14,13 @@ namespace SistemaSENAI
     public partial class QuadroDeHorarios : Form
     {
         List<string> nomeAluno = new List<string>();
-        public QuadroDeHorarios(List<string> nomeAl)
+        string cpfAluno;
+        string cursoAluno;
+        public QuadroDeHorarios(List<string> nomeAl, string cpfAl, string cursoAl)
         {
             nomeAluno = nomeAl;
+            cpfAluno = cpfAl;
+            cursoAluno = cursoAl;
             InitializeComponent();
         }
 
@@ -25,7 +29,7 @@ namespace SistemaSENAI
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno);
+            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
             PIAluno.Show();
         }
 
@@ -44,7 +48,7 @@ namespace SistemaSENAI
             conexao.Close();
         }
 
-        private void QuadroDeHorarios_FormClosing(object sender, FormClosingEventArgs e)
+        private void QuadroDeHorarios_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }

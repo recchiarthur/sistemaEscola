@@ -151,9 +151,10 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Help;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(185, 9);
+            this.label1.Location = new System.Drawing.Point(154, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(654, 412);
             this.label1.TabIndex = 8;
@@ -172,9 +173,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(569, 176);
+            this.pictureBox2.Location = new System.Drawing.Point(584, 136);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(448, 369);
+            this.pictureBox2.Size = new System.Drawing.Size(343, 396);
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 

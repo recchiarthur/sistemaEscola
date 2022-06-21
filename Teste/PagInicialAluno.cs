@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,11 +14,17 @@ namespace SistemaSENAI
     public partial class PagInicialAluno : Form
     {
 
-        List<string> nomeAluno = new List<string>();
+        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF122\TEW_SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
-        public PagInicialAluno(List<string> nomeAl)
+        List<string> nomeAluno = new List<string>();
+        string cpfAluno;
+        string cursoAluno;
+
+        public PagInicialAluno(List<string> nomeAl, string cpfAl, string cursoAl)
         {
             nomeAluno = nomeAl;
+            cpfAluno = cpfAl;
+            cursoAluno = cursoAl;
             InitializeComponent();
         }
 
@@ -34,21 +41,21 @@ namespace SistemaSENAI
         private void buttonNotas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Notas notas = new Notas(nomeAluno);
+            Notas notas = new Notas(nomeAluno, cpfAluno, cursoAluno);
             notas.ShowDialog();
         }
 
         private void buttonCalend_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Calendario calendario = new Calendario();
+            Calendario calendario = new Calendario(nomeAluno, cpfAluno, cursoAluno);
             calendario.ShowDialog();
         }
 
         private void buttonQuadro_Click(object sender, EventArgs e)
         {
             this.Hide();
-            QuadroDeHorarios quadroDeHorarios = new QuadroDeHorarios(nomeAluno);
+            QuadroDeHorarios quadroDeHorarios = new QuadroDeHorarios(nomeAluno, cpfAluno, cursoAluno);
             quadroDeHorarios.ShowDialog();
         }
 
@@ -76,14 +83,14 @@ namespace SistemaSENAI
         private void buttonCart_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Carteirinha carteirinha = new Carteirinha(nomeAluno);
+            Carteirinha carteirinha = new Carteirinha(nomeAluno, cpfAluno, cursoAluno);
             carteirinha.ShowDialog();
         }
 
         private void buttonGrade_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GradeCurricular gradeCurricular = new GradeCurricular();
+            GradeCurricular gradeCurricular = new GradeCurricular(nomeAluno, cpfAluno, cursoAluno);
             gradeCurricular.ShowDialog();
         }
 

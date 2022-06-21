@@ -33,12 +33,14 @@ namespace SistemaSENAI
                 SqlCommand select = new SqlCommand("select * from Aluno where email = @email and senha = @senha", conexao);
                 select.Parameters.AddWithValue("@email", TxtBoxEmail.Text);
                 select.Parameters.AddWithValue("@senha", TxtBoxSenha.Text);
+                string cpfAluno = "";
                 conexao.Open();
                 SqlDataReader dataReader = select.ExecuteReader();
                 while(dataReader.Read())
                 {
                     nomeAluno.Add(dataReader[3].ToString());
                     nomeAluno.Add(dataReader[4].ToString());
+                    cpfAluno = dataReader[8].ToString();
                 }
                 if (TxtBoxEmail.Text.Length < 11 || !dataReader.HasRows)
                 {
@@ -46,7 +48,18 @@ namespace SistemaSENAI
                     conexao.Close();
                     return;
                 }
-                PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno);
+                conexao.Close();
+                SqlCommand cmd = new SqlCommand("select * from Aluno as a inner join turmas as t on turmas_id_turmas = id_turmas inner join curso as c on curso_id_curso = id_curso where a.cpf = @cpf", conexao);
+                cmd.Parameters.AddWithValue("@cpf", cpfAluno);
+                string cursoAluno = "";
+                conexao.Open();
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    cursoAluno = sqlDataReader[14].ToString();
+                }
+                conexao.Close();
+                PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
                 this.Hide();
                 PIAluno.ShowDialog();
                 return;
@@ -105,13 +118,13 @@ namespace SistemaSENAI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (TxtBoxSenha.PasswordChar == '*')
+            if (TxtBoxSenha.PasswordChar == '●')
             {
                 TxtBoxSenha.PasswordChar = '\0';
             }
             else
             {
-                TxtBoxSenha.PasswordChar = '*';
+                TxtBoxSenha.PasswordChar = '●';
             }
         }
 

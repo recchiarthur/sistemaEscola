@@ -109,7 +109,7 @@ namespace SistemaSENAI
             this.TxtBoxSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.TxtBoxSenha.Location = new System.Drawing.Point(597, 263);
             this.TxtBoxSenha.Name = "TxtBoxSenha";
-            this.TxtBoxSenha.PasswordChar = '*';
+            this.TxtBoxSenha.PasswordChar = '●';
             this.TxtBoxSenha.Size = new System.Drawing.Size(244, 30);
             this.TxtBoxSenha.TabIndex = 4;
             this.TxtBoxSenha.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
