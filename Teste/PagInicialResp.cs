@@ -35,9 +35,9 @@ namespace SistemaSENAI
 
         private void buttonBoletoResp_Click(object sender, EventArgs e)
         {
-            Boleto boleto = new Boleto();
-            this.Hide();
-            boleto.ShowDialog();
+            //Boleto boleto = new Boleto();
+            //this.Hide();
+            //boleto.ShowDialog();
         }
 
         private void buttonHorarioResp_Click(object sender, EventArgs e)

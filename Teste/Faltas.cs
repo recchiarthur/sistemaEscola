@@ -12,14 +12,22 @@ namespace SistemaSENAI
 {
     public partial class Faltas : Form
     {
-        public Faltas()
+        List<string> nomeAluno = new List<string>();
+        string cpfAluno;
+        string cursoAluno;
+        public Faltas(List<string> nomeAl, string cpfAl, string cursoAl)
         {
+            nomeAluno = nomeAl;
+            cpfAluno = cpfAl;
+            cursoAluno = cursoAl;
             InitializeComponent();
         }
 
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
+            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
+            PIAluno.Show();
         }
 
         private void Faltas_Load(object sender, EventArgs e)

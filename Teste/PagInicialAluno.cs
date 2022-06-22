@@ -14,7 +14,7 @@ namespace SistemaSENAI
     public partial class PagInicialAluno : Form
     {
 
-        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF122\TEW_SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
+        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF123\TEW_SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         List<string> nomeAluno = new List<string>();
         string cpfAluno;
@@ -25,6 +25,7 @@ namespace SistemaSENAI
             nomeAluno = nomeAl;
             cpfAluno = cpfAl;
             cursoAluno = cursoAl;
+
             InitializeComponent();
         }
 
@@ -69,14 +70,14 @@ namespace SistemaSENAI
         private void buttonRemat_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rematricula rematricula = new Rematricula();
+            Rematricula rematricula = new Rematricula(nomeAluno, cpfAluno, cursoAluno);
             rematricula.ShowDialog();
         }
 
         private void buttonBoleto_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Boleto boleto = new Boleto();
+            Boleto boleto = new Boleto(nomeAluno, cpfAluno, cursoAluno);
             boleto.ShowDialog();
         }
 

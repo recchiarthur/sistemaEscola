@@ -19,7 +19,7 @@ namespace SistemaSENAI
             InitializeComponent();
         }
 
-        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF122\TEW_SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
+        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF123\TEW_SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         public void ValidacaoEntrar()
         {
@@ -56,7 +56,7 @@ namespace SistemaSENAI
                 SqlDataReader sqlDataReader = cmd.ExecuteReader();
                 while (sqlDataReader.Read())
                 {
-                    cursoAluno = sqlDataReader[14].ToString();
+                    cursoAluno = sqlDataReader[15].ToString();
                 }
                 conexao.Close();
                 PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
