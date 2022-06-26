@@ -38,7 +38,7 @@
             this.buttonVoltar.BackColor = System.Drawing.Color.DarkRed;
             this.buttonVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.buttonVoltar.ForeColor = System.Drawing.Color.Coral;
-            this.buttonVoltar.Location = new System.Drawing.Point(0, 468);
+            this.buttonVoltar.Location = new System.Drawing.Point(12, 133);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(166, 68);
             this.buttonVoltar.TabIndex = 3;
@@ -51,7 +51,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.label1.ForeColor = System.Drawing.Color.MintCream;
-            this.label1.Location = new System.Drawing.Point(12, 147);
+            this.label1.Location = new System.Drawing.Point(10, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(403, 46);
             this.label1.TabIndex = 4;
@@ -63,7 +63,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
             this.label2.ForeColor = System.Drawing.Color.MintCream;
-            this.label2.Location = new System.Drawing.Point(12, 205);
+            this.label2.Location = new System.Drawing.Point(10, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 63);
             this.label2.TabIndex = 5;
@@ -75,7 +75,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(923, 534);
+            this.ClientSize = new System.Drawing.Size(599, 212);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonVoltar);

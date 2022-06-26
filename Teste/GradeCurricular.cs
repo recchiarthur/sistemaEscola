@@ -32,7 +32,7 @@ namespace SistemaSENAI
 
         private void GradeCurricular_Load(object sender, EventArgs e)
         {
-            if(cursoAluno == "Análise e Desenvolvimento de Sistemas")
+            if (cursoAluno == "Análise e Desenvolvimento de Sistemas")
             {
                 label1.Text = "Grade curricular do curso de Análise e Desenvolvimento de Sistemas\n3º período:";
                 label2.Text = "18 meses";
@@ -45,7 +45,7 @@ namespace SistemaSENAI
                 label6.Text = "Teste de Sistemas";
                 label10.Text = "60";
             }
-            else if(cursoAluno == "Mecatrônica")
+            else if (cursoAluno == "Mecatrônica")
             {
                 label1.Text = "Grade curricular do curso de Mecatrônica\n3º período:";
                 label2.Text = "24 meses";

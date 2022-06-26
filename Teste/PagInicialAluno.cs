@@ -14,11 +14,12 @@ namespace SistemaSENAI
     public partial class PagInicialAluno : Form
     {
 
-        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF123\TEW_SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
+        SqlConnection conexao = new SqlConnection(@"Server=ARTHUREC-LAPTOP\SQLEXPRESS03;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         List<string> nomeAluno = new List<string>();
         string cpfAluno;
         string cursoAluno;
+        const char aOuR = 'a';
 
         public PagInicialAluno(List<string> nomeAl, string cpfAl, string cursoAl)
         {
@@ -42,7 +43,7 @@ namespace SistemaSENAI
         private void buttonNotas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Notas notas = new Notas(nomeAluno, cpfAluno, cursoAluno);
+            Notas notas = new Notas(nomeAluno, cpfAluno, cursoAluno, aOuR, null);
             notas.ShowDialog();
         }
 
@@ -56,14 +57,14 @@ namespace SistemaSENAI
         private void buttonQuadro_Click(object sender, EventArgs e)
         {
             this.Hide();
-            QuadroDeHorarios quadroDeHorarios = new QuadroDeHorarios(nomeAluno, cpfAluno, cursoAluno);
+            QuadroDeHorarios quadroDeHorarios = new QuadroDeHorarios(nomeAluno, cpfAluno, cursoAluno, aOuR, null);
             quadroDeHorarios.ShowDialog();
         }
 
         private void buttonFaltas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Faltas faltas = new Faltas();
+            Faltas faltas = new Faltas(nomeAluno, cpfAluno, cursoAluno);
             faltas.ShowDialog();
         }
 
@@ -77,7 +78,7 @@ namespace SistemaSENAI
         private void buttonBoleto_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Boleto boleto = new Boleto(nomeAluno, cpfAluno, cursoAluno);
+            Boleto boleto = new Boleto(nomeAluno, cpfAluno, cursoAluno, aOuR, null);
             boleto.ShowDialog();
         }
 

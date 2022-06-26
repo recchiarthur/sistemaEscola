@@ -19,11 +19,14 @@ namespace SistemaSENAI
             InitializeComponent();
         }
 
-        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF123\TEW_SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
+        SqlConnection conexao = new SqlConnection(@"Server=ARTHUREC-LAPTOP\SQLEXPRESS03;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         public void ValidacaoEntrar()
         {
             List<string> nomeAluno = new List<string>();
+            List<string> dadosResp = new List<string>();
+            string cpfAluno = "";
+            string cursoAluno = "";
             if (!CheckBoxAluno.Checked && !CheckBoxProf.Checked && !CheckBoxResp.Checked)
             {
                 MessageBox.Show("Selecione se você é professor, aluno ou responsável!");
@@ -33,7 +36,6 @@ namespace SistemaSENAI
                 SqlCommand select = new SqlCommand("select * from Aluno where email = @email and senha = @senha", conexao);
                 select.Parameters.AddWithValue("@email", TxtBoxEmail.Text);
                 select.Parameters.AddWithValue("@senha", TxtBoxSenha.Text);
-                string cpfAluno = "";
                 conexao.Open();
                 SqlDataReader dataReader = select.ExecuteReader();
                 while(dataReader.Read())
@@ -51,7 +53,6 @@ namespace SistemaSENAI
                 conexao.Close();
                 SqlCommand cmd = new SqlCommand("select * from Aluno as a inner join turmas as t on turmas_id_turmas = id_turmas inner join curso as c on curso_id_curso = id_curso where a.cpf = @cpf", conexao);
                 cmd.Parameters.AddWithValue("@cpf", cpfAluno);
-                string cursoAluno = "";
                 conexao.Open();
                 SqlDataReader sqlDataReader = cmd.ExecuteReader();
                 while (sqlDataReader.Read())
@@ -84,18 +85,46 @@ namespace SistemaSENAI
             }
             if(CheckBoxResp.Checked)
             {
-                SqlCommand select = new SqlCommand("select * from Responsavel where email = @email and senha = @senha", conexao);
+                SqlCommand select = new SqlCommand("select r.nome, r.sobrenome, r.email, r.CPF, r.senha, g.grau, a.nome, a.sobrenome, a.cpf from Responsavel as r inner join grau_parentesco as g on id_grau = grau_parentesco_id_grau inner join Aluno as a on Responsavel_idResponsavel = idResponsavel where r.email = @email and r.senha = @senha", conexao);
                 select.Parameters.AddWithValue("@email", TxtBoxEmail.Text);
                 select.Parameters.AddWithValue("@senha", TxtBoxSenha.Text);
                 conexao.Open();
                 SqlDataReader dataReader = select.ExecuteReader();
+                while(dataReader.Read())
+                {
+                    dadosResp.Add(dataReader[0].ToString());
+                    dadosResp.Add(dataReader[1].ToString());
+                    dadosResp.Add(dataReader[2].ToString());
+                    dadosResp.Add(dataReader[3].ToString());
+                    dadosResp.Add(dataReader[5].ToString());
+
+                    nomeAluno.Add(dataReader[6].ToString());
+                    nomeAluno.Add(dataReader[7].ToString());
+
+                    cpfAluno = dataReader[8].ToString();
+
+                    //  dadosResp
+                    //  {
+                    //      0 = nome
+                    //      1 = sobrenome;
+                    //      2 = email;
+                    //      3 = cpf;
+                    //      4 = grau_parentesco;
+                    //  }
+
+                    //  nomeAluno
+                    //  {
+                    //      0 = nome;
+                    //      1 = sobrenome;
+                    //  }
+                }
                 if (TxtBoxEmail.Text.Length < 11 || !dataReader.HasRows)
                 {
                     MessageBox.Show("CPF ou senha incorretos!");
                     conexao.Close();
                     return;
                 }
-                PagInicialResp PIResp = new PagInicialResp();
+                PagInicialResp PIResp = new PagInicialResp(dadosResp, nomeAluno, cpfAluno);
                 this.Hide();
                 PIResp.ShowDialog();
                 return;

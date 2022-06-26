@@ -16,21 +16,33 @@ namespace SistemaSENAI
         List<string> nomeAluno = new List<string>();
         string cpfAluno;
         string cursoAluno;
-        public QuadroDeHorarios(List<string> nomeAl, string cpfAl, string cursoAl)
+        char aOuR;
+        List<string> dadosResp = new List<string>();
+        public QuadroDeHorarios(List<string> nomeAl, string cpfAl, string cursoAl, char aour, List<string> dadosRe)
         {
             nomeAluno = nomeAl;
             cpfAluno = cpfAl;
             cursoAluno = cursoAl;
+            aOuR = aour;
+            dadosResp = dadosRe;
             InitializeComponent();
         }
 
-        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF123\TEW_SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
+        SqlConnection conexao = new SqlConnection(@"Server=ARTHUREC-LAPTOP\SQLEXPRESS03;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
-            PIAluno.Show();
+            if (aOuR == 'a')
+            {
+                PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
+                PIAluno.ShowDialog();
+            }
+            else if (aOuR == 'r')
+            {
+                PagInicialResp PIResp = new PagInicialResp(dadosResp, nomeAluno, cpfAluno);
+                PIResp.ShowDialog();
+            }
         }
 
         private void QuadroDeHorarios_Load(object sender, EventArgs e)

@@ -175,12 +175,6 @@
     <Compile Include="QuadroDeHorarios.Designer.cs">
       <DependentUpon>QuadroDeHorarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="RedefinirSenha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RedefinirSenha.Designer.cs">
-      <DependentUpon>RedefinirSenha.cs</DependentUpon>
-    </Compile>
     <Compile Include="RegNotasProf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,9 +242,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuadroDeHorarios.resx">
       <DependentUpon>QuadroDeHorarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RedefinirSenha.resx">
-      <DependentUpon>RedefinirSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegNotasProf.resx">
       <DependentUpon>RegNotasProf.cs</DependentUpon>

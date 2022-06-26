@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PagInicialResp));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonFaltasResp = new System.Windows.Forms.Button();
             this.buttonNotasResp = new System.Windows.Forms.Button();
             this.buttonBoletoResp = new System.Windows.Forms.Button();
             this.buttonHorarioResp = new System.Windows.Forms.Button();
+            this.labelOla = new System.Windows.Forms.Label();
+            this.labelGrau = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,17 +47,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(403, 524);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 75F);
-            this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(630, 230);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Portal do Responsável";
             // 
             // buttonFaltasResp
             // 
@@ -110,35 +100,61 @@
             this.buttonHorarioResp.UseVisualStyleBackColor = false;
             this.buttonHorarioResp.Click += new System.EventHandler(this.buttonHorarioResp_Click);
             // 
+            // labelOla
+            // 
+            this.labelOla.BackColor = System.Drawing.Color.Transparent;
+            this.labelOla.Font = new System.Drawing.Font("Microsoft Sans Serif", 75F);
+            this.labelOla.ForeColor = System.Drawing.Color.Coral;
+            this.labelOla.Location = new System.Drawing.Point(3, 9);
+            this.labelOla.Name = "labelOla";
+            this.labelOla.Size = new System.Drawing.Size(630, 145);
+            this.labelOla.TabIndex = 15;
+            this.labelOla.Text = "Portal do Responsável";
+            // 
+            // labelGrau
+            // 
+            this.labelGrau.AutoSize = true;
+            this.labelGrau.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.labelGrau.ForeColor = System.Drawing.Color.MintCream;
+            this.labelGrau.Location = new System.Drawing.Point(14, 171);
+            this.labelGrau.Name = "labelGrau";
+            this.labelGrau.Size = new System.Drawing.Size(419, 46);
+            this.labelGrau.TabIndex = 16;
+            this.labelGrau.Text = "Hoje sua aula será de:";
+            // 
             // PagInicialResp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(923, 534);
+            this.Controls.Add(this.labelGrau);
+            this.Controls.Add(this.labelOla);
             this.Controls.Add(this.buttonHorarioResp);
             this.Controls.Add(this.buttonBoletoResp);
             this.Controls.Add(this.buttonNotasResp);
             this.Controls.Add(this.buttonFaltasResp);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "PagInicialResp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PagInicialResp";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PagInicialResp_FormClosed);
+            this.Load += new System.EventHandler(this.PagInicialResp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonFaltasResp;
         private System.Windows.Forms.Button buttonNotasResp;
         private System.Windows.Forms.Button buttonBoletoResp;
         private System.Windows.Forms.Button buttonHorarioResp;
+        private System.Windows.Forms.Label labelOla;
+        private System.Windows.Forms.Label labelGrau;
     }
 }

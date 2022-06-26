@@ -16,19 +16,31 @@ namespace SistemaSENAI
         List<string> nomeAluno = new List<string>();
         string cpfAluno;
         string cursoAluno;
-        public Boleto(List<string> nomeAl, string cpfAl, string cursoAl)
+        char aOuR;
+        List<string> dadosResp = new List<string>();
+        public Boleto(List<string> nomeAl, string cpfAl, string cursoAl, char aour, List<string> dadosRe)
         {
             nomeAluno = nomeAl;
             cpfAluno = cpfAl;
             cursoAluno = cursoAl;
+            aOuR = aour;
+            dadosResp = dadosRe;
             InitializeComponent();
         }
 
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
-            PIAluno.Show();
+            if (aOuR == 'a')
+            {
+                PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
+                PIAluno.ShowDialog();
+            }
+            else if (aOuR == 'r')
+            {
+                PagInicialResp PIResp = new PagInicialResp(dadosResp, nomeAluno, cpfAluno);
+                PIResp.ShowDialog();
+            }
         }
 
         private void Boleto_Load(object sender, EventArgs e)

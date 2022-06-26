@@ -151,7 +151,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Coral;
             this.label1.Location = new System.Drawing.Point(154, 9);
