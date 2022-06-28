@@ -19,7 +19,7 @@ namespace SistemaSENAI
             InitializeComponent();
         }
 
-        SqlConnection conexao = new SqlConnection(@"Server=ARTHUREC-LAPTOP\SQLEXPRESS03;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
+        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF123\SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         public void ValidacaoEntrar()
         {
@@ -27,9 +27,9 @@ namespace SistemaSENAI
             List<string> dadosResp = new List<string>();
             string cpfAluno = "";
             string cursoAluno = "";
-            if (!CheckBoxAluno.Checked && !CheckBoxProf.Checked && !CheckBoxResp.Checked)
+            if (!CheckBoxAluno.Checked && !CheckBoxResp.Checked)
             {
-                MessageBox.Show("Selecione se você é professor, aluno ou responsável!");
+                MessageBox.Show("Selecione se você é aluno ou responsável!");
             }
             if (CheckBoxAluno.Checked)
             {
@@ -46,7 +46,7 @@ namespace SistemaSENAI
                 }
                 if (TxtBoxEmail.Text.Length < 11 || !dataReader.HasRows)
                 {
-                    MessageBox.Show("CPF ou senha incorretos!");
+                    MessageBox.Show("Email ou senha incorretos!");
                     conexao.Close();
                     return;
                 }
@@ -63,24 +63,6 @@ namespace SistemaSENAI
                 PagInicialAluno PIAluno = new PagInicialAluno(nomeAluno, cpfAluno, cursoAluno);
                 this.Hide();
                 PIAluno.ShowDialog();
-                return;
-            }
-            if(CheckBoxProf.Checked)
-            {
-                SqlCommand select = new SqlCommand("select * from Professor where email = @email and senha = @senha", conexao);
-                select.Parameters.AddWithValue("@email", TxtBoxEmail.Text);
-                select.Parameters.AddWithValue("@senha", TxtBoxSenha.Text);
-                conexao.Open();
-                SqlDataReader dataReader = select.ExecuteReader();
-                if (TxtBoxEmail.Text.Length < 11 || !dataReader.HasRows)
-                {
-                    MessageBox.Show("CPF ou senha incorretos!");
-                    conexao.Close();
-                    return;
-                }
-                PagInicialProf PIProf = new PagInicialProf();
-                this.Hide();
-                PIProf.ShowDialog();
                 return;
             }
             if(CheckBoxResp.Checked)
@@ -120,7 +102,7 @@ namespace SistemaSENAI
                 }
                 if (TxtBoxEmail.Text.Length < 11 || !dataReader.HasRows)
                 {
-                    MessageBox.Show("CPF ou senha incorretos!");
+                    MessageBox.Show("Email ou senha incorretos!");
                     conexao.Close();
                     return;
                 }
@@ -161,16 +143,6 @@ namespace SistemaSENAI
         {
             if (CheckBoxAluno.Checked == true)
             {
-                CheckBoxProf.Checked = false;
-                CheckBoxResp.Checked = false;
-            }
-        }
-
-        private void CheckBoxProf_CheckedChanged(object sender, EventArgs e)
-        {
-            if (CheckBoxProf.Checked == true)
-            {
-                CheckBoxAluno.Checked = false;
                 CheckBoxResp.Checked = false;
             }
         }
@@ -180,7 +152,6 @@ namespace SistemaSENAI
             if (CheckBoxResp.Checked == true)
             {
                 CheckBoxAluno.Checked = false;
-                CheckBoxProf.Checked = false;
             }
         }
 

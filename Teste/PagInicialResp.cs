@@ -14,7 +14,7 @@ namespace SistemaSENAI
     public partial class PagInicialResp : Form
     {
 
-        SqlConnection conexao = new SqlConnection(@"Server=ARTHUREC-LAPTOP\SQLEXPRESS03;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
+        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF123\SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         List<string> dadosResp = new List<string>();
         List<string> nomeAluno = new List<string>();
@@ -29,14 +29,6 @@ namespace SistemaSENAI
             cpfAluno = cpfAl;
 
             InitializeComponent();
-        }
-
-        private void buttonFaltasResp_Click(object sender, EventArgs e)
-        {
-            //Faltas faltas = new Faltas();
-            //this.Hide();
-            //faltas.ShowDialog();
-            //this.Show();
         }
 
         private void buttonNotasResp_Click(object sender, EventArgs e)

@@ -28,7 +28,7 @@ namespace SistemaSENAI
             InitializeComponent();
         }
 
-        SqlConnection conexao = new SqlConnection(@"Server=ARTHUREC-LAPTOP\SQLEXPRESS03;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
+        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF123\SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
@@ -47,15 +47,13 @@ namespace SistemaSENAI
 
         private void QuadroDeHorarios_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select c.nome, t.id_turmas from disciplina as c inner join turmas as t on c.id_disciplina = t.curso_id_curso inner join Aluno as a on t.id_turmas = a.turmas_id_turmas where a.nome = @nome and a.sobrenome = @sobrenome", conexao);
-            cmd.Parameters.AddWithValue("@nome", nomeAluno[0]);
-            cmd.Parameters.AddWithValue("@sobrenome", nomeAluno[1]);
+            SqlCommand cmd = new SqlCommand("select d.nome from tbnotas as n inner join Aluno as a on n.Aluno_idAluno = a.idAluno inner join disciplina as d on d.notas_id_notas = n.id_notas where a.cpf = @cpf", conexao);
+            cmd.Parameters.AddWithValue("@cpf", cpfAluno);
             conexao.Open();
             SqlDataReader sqlDataReader = cmd.ExecuteReader();
             while (sqlDataReader.Read())
             {
                 label2.Text = sqlDataReader[0].ToString();
-                label4.Text = sqlDataReader[1].ToString();
             }
             conexao.Close();
         }

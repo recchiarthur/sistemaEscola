@@ -14,7 +14,7 @@ namespace SistemaSENAI
     public partial class PagInicialAluno : Form
     {
 
-        SqlConnection conexao = new SqlConnection(@"Server=ARTHUREC-LAPTOP\SQLEXPRESS03;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
+        SqlConnection conexao = new SqlConnection(@"Server=SNCCH01LABF123\SQLEXPRESS;Database=sistemaescola;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         List<string> nomeAluno = new List<string>();
         string cpfAluno;
@@ -59,13 +59,6 @@ namespace SistemaSENAI
             this.Hide();
             QuadroDeHorarios quadroDeHorarios = new QuadroDeHorarios(nomeAluno, cpfAluno, cursoAluno, aOuR, null);
             quadroDeHorarios.ShowDialog();
-        }
-
-        private void buttonFaltas_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Faltas faltas = new Faltas(nomeAluno, cpfAluno, cursoAluno);
-            faltas.ShowDialog();
         }
 
         private void buttonRemat_Click(object sender, EventArgs e)

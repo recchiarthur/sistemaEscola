@@ -33,7 +33,6 @@ namespace SistemaSENAI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Janela));
             this.TxtBoxEmail = new System.Windows.Forms.TextBox();
             this.CheckBoxAluno = new System.Windows.Forms.CheckBox();
-            this.CheckBoxProf = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtBoxSenha = new System.Windows.Forms.TextBox();
@@ -57,7 +56,7 @@ namespace SistemaSENAI
             this.CheckBoxAluno.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxAluno.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CheckBoxAluno.Font = new System.Drawing.Font("Arial", 20F);
-            this.CheckBoxAluno.Location = new System.Drawing.Point(482, 198);
+            this.CheckBoxAluno.Location = new System.Drawing.Point(482, 206);
             this.CheckBoxAluno.Name = "CheckBoxAluno";
             this.CheckBoxAluno.Size = new System.Drawing.Size(102, 36);
             this.CheckBoxAluno.TabIndex = 0;
@@ -65,21 +64,6 @@ namespace SistemaSENAI
             this.CheckBoxAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CheckBoxAluno.UseVisualStyleBackColor = false;
             this.CheckBoxAluno.CheckedChanged += new System.EventHandler(this.CheckBoxAluno_CheckedChanged);
-            // 
-            // CheckBoxProf
-            // 
-            this.CheckBoxProf.AutoSize = true;
-            this.CheckBoxProf.BackColor = System.Drawing.Color.Transparent;
-            this.CheckBoxProf.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CheckBoxProf.Font = new System.Drawing.Font("Arial", 20F);
-            this.CheckBoxProf.Location = new System.Drawing.Point(437, 227);
-            this.CheckBoxProf.Name = "CheckBoxProf";
-            this.CheckBoxProf.Size = new System.Drawing.Size(148, 36);
-            this.CheckBoxProf.TabIndex = 1;
-            this.CheckBoxProf.Text = "Professor";
-            this.CheckBoxProf.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.CheckBoxProf.UseVisualStyleBackColor = false;
-            this.CheckBoxProf.CheckedChanged += new System.EventHandler(this.CheckBoxProf_CheckedChanged);
             // 
             // label1
             // 
@@ -144,7 +128,7 @@ namespace SistemaSENAI
             this.CheckBoxResp.BackColor = System.Drawing.Color.Transparent;
             this.CheckBoxResp.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CheckBoxResp.Font = new System.Drawing.Font("Arial", 20F);
-            this.CheckBoxResp.Location = new System.Drawing.Point(395, 259);
+            this.CheckBoxResp.Location = new System.Drawing.Point(395, 251);
             this.CheckBoxResp.Name = "CheckBoxResp";
             this.CheckBoxResp.Size = new System.Drawing.Size(190, 36);
             this.CheckBoxResp.TabIndex = 9;
@@ -167,7 +151,6 @@ namespace SistemaSENAI
             this.Controls.Add(this.TxtBoxSenha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CheckBoxAluno);
-            this.Controls.Add(this.CheckBoxProf);
             this.Controls.Add(this.TxtBoxEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -185,7 +168,6 @@ namespace SistemaSENAI
         #endregion
         private System.Windows.Forms.TextBox TxtBoxEmail;
         private CheckBox CheckBoxAluno;
-        private CheckBox CheckBoxProf;
         private Label label1;
         private Label label2;
         private TextBox TxtBoxSenha;
